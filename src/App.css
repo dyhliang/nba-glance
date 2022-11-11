@@ -18,7 +18,7 @@ header {
 
 body {
   font-family: var(--font-roboto);
-  background-color: #212426;
+  background-color: lightgray;
 }
 
 .app {
