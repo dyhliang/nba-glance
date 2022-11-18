@@ -21,7 +21,7 @@ body {
   background-color: lightgray;
 }
 
-.app {
+.App {
   padding: 4rem;
 
   display: flex;
@@ -34,7 +34,7 @@ h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
   background: linear-gradient(90deg,
-      rgba(80, 200, 120, 1) 0%,
+      rgba(80, 200, 120, 1) 100%,
       rgba(249, 211, 180, 0) 100%);
   background-clip: text;
   -webkit-background-clip: text;
