@@ -9,17 +9,8 @@ function App() {
         fetch(`https://tabm1jhbeb.execute-api.us-west-2.amazonaws.com/Alpha`)
             .then((response) => response.json())
             .then((responseJson) => {
-                const parsed = responseJson;
-                let hlines1 = `${parsed[0]["title"]}`
-                let hlines2 = `${parsed[1]["title"]}`
-                let hlines3 = `${parsed[2]["title"]}`
-                let hlines4 = `${parsed[3]["title"]}`
-                let hlines5 = `${parsed[4]["title"]}`
-
-                let headlines = `${hlines1} ${hlines2} ${hlines3} ${hlines4} ${hlines5}`;
-
-                //let headlines = `${parsed[0]["title"]} ${parsed[1]["title"]} \n${parsed[2]["title"]} ${parsed[3]["title"]} ${parsed[4]["title"]}`
-                setNews(headlines);
+                setNews(responseJson);
+                return responseJson.news;
             })
             .catch((error) => {
                 console.error(error);
@@ -32,10 +23,16 @@ function App() {
 
     return (
         <div className="App">
-            <h1> Today's Headlines: </h1>
-            <GetNews></GetNews> 
-            {JSON.stringify(news, null, 2)}
 
+            <h1> NBA Index </h1>
+            <br></br>
+            <h2>Headlines from Around the League</h2>
+            <ul>
+                {news.map((article) => (
+                    <li>{article.title}</li>
+                ))}
+            </ul>
+            <br></br>
             <h1> Standings: </h1>
         </div>
     );
