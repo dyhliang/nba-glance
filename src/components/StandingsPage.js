@@ -9,7 +9,7 @@ function StandingsPage() {
     const [PacificStandings, setPacificStandings] = useState([]);
     const [SouthwestStandings, setSouthwestStandings] = useState([]);
 
-    const GetAtlanticStandings = () => {
+    const GetLeagueStandings = () => {
         const options = {
             method: 'GET',
             headers: {
@@ -17,98 +17,68 @@ function StandingsPage() {
             }
         };
 
-        fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=atlantic', options)
-            .then(res => res.json())
-            .then(res => {
-                console.log(res.response)
-                setAtlanticStandings(res.response);
-            }).catch(err => console.error(err));
-    };
-
-    const GetCentralStandings = () => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61', 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
+        const GetAtlanticStandings = () => {
+            fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=atlantic', options)
+                .then(res => res.json())
+                .then(res => {
+                    console.log(res.response)
+                    setAtlanticStandings(res.response);
+                }).catch(err => console.error(err));
         };
 
-        fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=central', options)
-            .then(res => res.json())
-            .then(res => {
-                setCentralStandings(res.response);
-            }).catch(err => console.error(err));
-    };
-
-    const GetSoutheastStandings = () => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61', 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
+        const GetCentralStandings = () => {
+            fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=central', options)
+                .then(res => res.json())
+                .then(res => {
+                    setCentralStandings(res.response);
+                }).catch(err => console.error(err));
         };
 
-        fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=southeast', options)
-            .then(res => res.json())
-            .then(res => {
-                setSoutheastStandings(res.response);
-            }).catch(err => console.error(err));
-    };
-
-    const GetNorthwestStandings = () => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61', 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
+        const GetSoutheastStandings = () => {
+            fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=southeast', options)
+                .then(res => res.json())
+                .then(res => {
+                    setSoutheastStandings(res.response);
+                }).catch(err => console.error(err));
         };
 
-        fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=northwest', options)
-            .then(res => res.json())
-            .then(res => {
-                setNorthwestStandings(res.response);
-            }).catch(err => console.error(err));
-    };
-
-    const GetPacificStandings = () => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61', 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
+        const GetNorthwestStandings = () => {
+            fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=northwest', options)
+                .then(res => res.json())
+                .then(res => {
+                    setNorthwestStandings(res.response);
+                }).catch(err => console.error(err));
         };
 
-        fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=pacific', options)
-            .then(res => res.json())
-            .then(res => {
-                setPacificStandings(res.response);
-            }).catch(err => console.error(err));
-    };
-
-    const GetSouthwestStandings = () => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61', 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
+        const GetPacificStandings = () => {
+            fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=pacific', options)
+                .then(res => res.json())
+                .then(res => {
+                    setPacificStandings(res.response);
+                }).catch(err => console.error(err));
         };
 
-        fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=southwest', options)
-            .then(res => res.json())
-            .then(res => {
-                setSouthwestStandings(res.response);
-            }).catch(err => console.error(err));
-    };
+        const GetSouthwestStandings = () => {
+            fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=southwest', options)
+                .then(res => res.json())
+                .then(res => {
+                    setSouthwestStandings(res.response);
+                }).catch(err => console.error(err));
+        };
 
-
-    useEffect(() => {
         GetAtlanticStandings();
         GetCentralStandings();
         GetSoutheastStandings();
         GetNorthwestStandings();
         GetPacificStandings();
         GetSouthwestStandings();
+
+    };
+
+    useEffect(() => {
+        GetLeagueStandings();
     }, []);
+
     return (
         <div>
             <h1> Standings </h1>
@@ -145,7 +115,6 @@ function StandingsPage() {
             <ul>
                 {SouthwestStandings.map(output => <div>{output.team.name} (W-L): {output.win.total}-{output.loss.total} {output.win.percentage}</div>)}
             </ul>
-
 
         </div>
     )
