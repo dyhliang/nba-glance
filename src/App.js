@@ -8,6 +8,7 @@ function App() {
     const [eastStandings, setEastStandings] = useState([]);
     const [westStandings, setWestStandings] = useState([]);
     const [gamesToday, setGamesToday] = useState([]);
+    const [rndPlayer, setRndPlayer] = useState([]);
 
     const GetNews = () => {
         fetch(`https://tabm1jhbeb.execute-api.us-west-2.amazonaws.com/Alpha`)
@@ -74,12 +75,33 @@ function App() {
             .catch(err => console.error(err));
     };
 
+    const GetRndPlayer = () => {
+        let randomNum = (Math.floor(Math.random() * (493 - 1 + 1)) + 1).toString();
+        let new_url = `https://api-nba-v1.p.rapidapi.com/players?id=${randomNum}`
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61',
+                'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
+            }
+        };
+
+        fetch(new_url, options)
+            .then(res => res.json())
+            .then(res => {
+                setRndPlayer(res.response);
+                console.log(res.response)
+            })
+            .catch(err => console.error(err));
+    };
+
 
     useEffect(() => {
         GetNews();
         GetEastStandings();
         GetWestStandings();
         GetGamesToday();
+        GetRndPlayer();
     }, []);
 
     return (
@@ -107,7 +129,12 @@ function App() {
 
             <h1> Today's Games </h1>
             <ul>
-                {gamesToday.map(output => <div>{output.teams.home.name} {output.scores.home.points}  -  {output.teams.visitors.name} {output.scores.visitors.points}</div>)}
+                {gamesToday.map(output => <div>{output.teams.home.name} {output.scores.home.points}  -  {output.teams.visitors.name} {output.scores.visitors.points} ({output.status.long})</div>)}
+            </ul>
+
+            <h1> Random Player </h1>
+            <ul>
+                {rndPlayer.map(output => <div>{output.firstname} {output.lastname} </div>)}
             </ul>
 
         </div>
