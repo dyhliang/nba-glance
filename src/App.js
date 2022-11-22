@@ -7,7 +7,6 @@ import StandingsPage from './components/StandingsPage';
 //const API_URL = 'https://www.balldontlie.io/api/v1/players'
 
 function App() {
-
     return (
         <div className="App">
             <h1> NBA Index </h1>

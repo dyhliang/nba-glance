@@ -22,7 +22,6 @@ function RecentGamesPage() {
             .then(res => res.json())
             .then(res => {
                 setRecentGames(res.response);
-                console.log(res.response)
             })
             .catch(err => console.error(err));
     };
