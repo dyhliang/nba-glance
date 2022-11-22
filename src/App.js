@@ -1,22 +1,28 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import HeadlinesPage from './components/HeadlinesPage';
-import RandomPlayerPage from './components/RandomPlayerPage';
-import RecentGamesPage from './components/RecentGames';
-import StandingsPage from './components/StandingsPage';
+import HomePage from './components/HomePage';
+import WhpfPage from './components/WhpfPage';
+
 //const API_URL = 'https://www.balldontlie.io/api/v1/players'
 
 function App() {
     return (
         <div className="App">
-            <h1> NBA Index </h1>
-            <HeadlinesPage></HeadlinesPage>
+            <header>
+                <Router>
+                    <header className="App-header">
+                        <Route path="/" exact>
+                            <HomePage />
+                        </Route>
 
-            <RecentGamesPage></RecentGamesPage>
+                        <Route path="/whpf">
+                            <WhpfPage />
+                        </Route>
+                    </header>
+                </Router>
+            </header>
 
-            <StandingsPage></StandingsPage>
-
-            <RandomPlayerPage></RandomPlayerPage>
         </div>
     );
 }

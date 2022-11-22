@@ -13,12 +13,12 @@
 }
 
 header {
-  color: #b90e0a;
+  color: #ee6730;
 }
 
 body {
   font-family: var(--font-roboto);
-  background-color: lightgray;
+  background-color: #242526;
 }
 
 .App {
