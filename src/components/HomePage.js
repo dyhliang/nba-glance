@@ -13,6 +13,10 @@ function HomePage() {
                 <Link className="App-link" to="/whpf">Who He Play For?</Link>
             </h2>
 
+            <h2>
+                <Link className="App-link" to="/rnd-game">Relive NBA History</Link>
+            </h2>
+
             <HeadlinesPage></HeadlinesPage>
 
             <RecentGamesPage></RecentGamesPage>

@@ -2,9 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage';
+import RandomGamePage from './components/RandomGamePage';
 import WhpfPage from './components/WhpfPage';
-
-//const API_URL = 'https://www.balldontlie.io/api/v1/players'
 
 function App() {
     return (
@@ -18,6 +17,10 @@ function App() {
 
                         <Route path="/whpf">
                             <WhpfPage />
+                        </Route>
+
+                        <Route path="/rnd-game">
+                            <RandomGamePage />
                         </Route>
                     </header>
                 </Router>

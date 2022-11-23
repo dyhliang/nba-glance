@@ -32,7 +32,7 @@ function RecentGamesPage() {
     }, []);
 
     return (
-        <div>
+        <div className="App">
 
             <h1> Most Recent Games </h1>
             <h5> NOTE: The API only shows the current day's games after the first tipoff, refer to a schedule for this time.
