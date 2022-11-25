@@ -8,7 +8,7 @@ function WhpfPage() {
     const [guess, setGuess] = useState("");
     const [feedback, setFeedback] = useState("");
 
-    const GetRndPlayer = () => {
+    const getRndPlayer = () => {
         let randomNum = (Math.floor(Math.random() * (493 - 1 + 1)) + 1).toString();
         fetch(`https://www.balldontlie.io/api/v1/players/${randomNum}`)
             .then(res => res.json())
@@ -20,7 +20,7 @@ function WhpfPage() {
             .catch(err => console.error(err));
     };
 
-    const CheckGuess = () => {
+    const checkGuess = () => {
         if (guess === teamName) {
             setFeedback("Correct!");
         } else {
@@ -28,9 +28,12 @@ function WhpfPage() {
         }
     };
 
+    function refreshPage() {
+        window.location.reload(false);
+    };
 
     useEffect(() => {
-        GetRndPlayer();
+        getRndPlayer();
     }, []);
 
     return (
@@ -57,11 +60,13 @@ function WhpfPage() {
                     value={guess}
                     onChange={(e) => setGuess(e.target.value)}
                 />
-                <button onClick={CheckGuess}> Guess! </button>
+                <button onClick={checkGuess}> Guess! </button>
                 <br></br>
                 <br></br>
                 {feedback}
             </form>
+            <button onClick={refreshPage}> Another Player </button>
+            
 
             <footer>
                 <br></br>
