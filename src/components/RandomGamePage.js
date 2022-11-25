@@ -20,7 +20,7 @@ function RandomGamePage() {
             .then(res => res.json())
             .then(res => {
                 setRndGameStats(res.response);
-                console.log(randomNum, res.response)
+                console.log(res.response)
             })
             .catch(err => console.error(err));
     };
@@ -59,16 +59,15 @@ function RandomGamePage() {
                         @ {output.arena.name} in {output.arena.city}
                         <br></br>
                         (Story): {output.nugget}
+                        
                         (ID): {output.id}
                         <br></br>
                     </div>)}
             </ul>
 
             <br></br>
-            <button>More stats from this game</button>
-            <div>
-                {moreInfo.map(output => <div>{output.leadchanges} </div>)}
-            </div>
+            <button onClick={() => setMoreInfo(moreInfo)}>More stats from this game</button>
+
 
             <footer>
                 <Link className="App-link" to="/">Back to the Home Page</Link>

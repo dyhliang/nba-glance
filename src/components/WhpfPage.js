@@ -6,33 +6,28 @@ let teamName = "";
 function WhpfPage() {
     const [rndPlayer, setRndPlayer] = useState([]);
     const [guess, setGuess] = useState("");
-    const [msg, setMsg] = useState("");
+    const [feedback, setFeedback] = useState("");
 
     const GetRndPlayer = () => {
         let randomNum = (Math.floor(Math.random() * (493 - 1 + 1)) + 1).toString();
-        let new_url = `https://www.balldontlie.io/api/v1/players/${randomNum}`
-
-        fetch(new_url)
+        fetch(`https://www.balldontlie.io/api/v1/players/${randomNum}`)
             .then(res => res.json())
             .then(res => {
                 setRndPlayer(res);
                 teamName = res["team"]["full_name"];
-                console.log(res, teamName);
+                console.log(res);
             })
             .catch(err => console.error(err));
     };
 
-    function getMsg(guess) {
+    const CheckGuess = () => {
         if (guess === teamName) {
-            return "Correct!";
+            setFeedback("Correct!");
         } else {
-            return `Wrong! He played for the ${teamName}`;
+            setFeedback(`Wrong - He last played for the ${teamName}.`);
         }
     };
 
-    function CheckUserGuess(guess) {
-        setMsg(getMsg(guess));
-    }
 
     useEffect(() => {
         GetRndPlayer();
@@ -51,7 +46,10 @@ function WhpfPage() {
             </ul>
 
             <br></br>
-            <form>Your guess:
+            <form onSubmit={(event) => {
+                event.preventDefault();
+            }}
+            >Your guess:
                 <input
                     type='text'
                     id='user-guess'
@@ -59,8 +57,10 @@ function WhpfPage() {
                     value={guess}
                     onChange={(e) => setGuess(e.target.value)}
                 />
-                <button onClick={CheckUserGuess}> Guess! </button>
-                {msg}
+                <button onClick={CheckGuess}> Guess! </button>
+                <br></br>
+                <br></br>
+                {feedback}
             </form>
 
             <footer>
