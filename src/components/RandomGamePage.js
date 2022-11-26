@@ -1,50 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+let randomNum = (Math.floor(Math.random() * (9000 - 1 + 1)) + 1).toString();
+
 function RandomGamePage() {
     const [rndGameStats, setRndGameStats] = useState([]);
     const [moreInfo, setMoreInfo] = useState([]);
+    const [isHidden, setIsHidden] = useState(false);
 
-    const GetRndGame = () => {
-        let randomNum = (Math.floor(Math.random() * (9000 - 1 + 1)) + 1).toString();
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61',
+            'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
+        }
+    };
+
+    const getRndGame = () => {
         let new_url = `https://api-nba-v1.p.rapidapi.com/games?id=${randomNum}`
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61',
-                'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
-        };
 
         fetch(new_url, options)
             .then(res => res.json())
             .then(res => {
                 setRndGameStats(res.response);
+                setMoreInfo(res.response);
                 console.log(res.response);
             })
             .catch(err => console.error(err));
     };
 
-    function getMoreInfo(id) {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61',
-                'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
-        };
+    const getMoreInfo = event => {
+        setIsHidden(current => !current);
+    }
 
-        fetch(`https://api-nba-v1.p.rapidapi.com/games?id=${id}}`, options)
-            .then(res => res.json())
-            .then(res => {
-                console.log(res.response);
-                setMoreInfo(res.response);
-            })
-            .catch(err => console.error(err));
+    function refreshPage() {
+        window.location.reload(false);
     };
 
     useEffect(() => {
-        GetRndGame();
+        getRndGame();
     }, []);
 
     return (
@@ -57,7 +51,19 @@ function RandomGamePage() {
                     <div>Story - {output.nugget} </div>
                 </div>)}
 
-            <button>More info from this game</button>
+            <div><button onClick={getMoreInfo}> More info </button></div>
+            {isHidden &&
+                (moreInfo.map(output =>
+                    <div>
+                        <div>Team records after this game:</div>
+                        <div>{output.teams.home.name} ({output.scores.home.win}-{output.scores.home.loss})</div>
+                        <div>{output.teams.visitors.name} ({output.scores.visitors.win}-{output.scores.visitors.loss})</div>
+                    </div>
+                ))
+            }
+
+            <br></br>
+            <button onClick={refreshPage}> Another Game </button>
             <br></br>
             <footer>
                 <div><Link className="App-link" to="/">Back to the Home Page</Link></div>
