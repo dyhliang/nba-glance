@@ -23,7 +23,7 @@ function HeadlinesPage() {
         <div className="App">
             <table>
                 <h1>
-                    Headlines from Around the League
+                    Headlines
                 </h1>
                 {news.map((article) => (
                     <tr>{article.title}</tr>
