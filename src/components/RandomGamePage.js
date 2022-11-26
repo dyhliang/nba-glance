@@ -50,16 +50,14 @@ function RandomGamePage() {
     return (
         <div className="App">
             <h1> Random Game Highlight </h1>
-            <ul>
-                {rndGameStats.map(output =>
-                    <div>
-                        <div>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}</div>
-                        <br></br>
-                        <div>{output.teams.home.name} {output.scores.home.points} - {output.teams.visitors.name} {output.scores.visitors.points}</div>
-                        <div>Story - {output.nugget} </div>
-                    </div>)}
-            </ul>
+            {rndGameStats.map(output =>
+                <div>
+                    <div>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}</div>
+                    <div>{output.teams.home.name} {output.scores.home.points} - {output.teams.visitors.name} {output.scores.visitors.points}</div>
+                    <div>Story - {output.nugget} </div>
+                </div>)}
 
+            <button>More info from this game</button>
             <br></br>
             <footer>
                 <div><Link className="App-link" to="/">Back to the Home Page</Link></div>
