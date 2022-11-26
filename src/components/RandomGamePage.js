@@ -56,11 +56,7 @@ function RandomGamePage() {
                         <div>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}</div>
                         <br></br>
                         <div>{output.teams.home.name} {output.scores.home.points} - {output.teams.visitors.name} {output.scores.visitors.points}</div>
-
                         <div>Story - {output.nugget} </div>
-
-                        (ID): {output.id}
-
                     </div>)}
             </ul>
 
