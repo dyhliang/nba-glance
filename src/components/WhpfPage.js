@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 let teamName = "";
-let playerName = "";
+let playerFirstName = "";
+let playerLastName = "";
 
 function WhpfPage() {
     const [rndPlayer, setRndPlayer] = useState([]);
@@ -17,14 +18,15 @@ function WhpfPage() {
             .then(res => res.json())
             .then(res => {
                 setRndPlayer(res);
+                console.log(res);
                 teamName = res["team"]["full_name"];
-                playerName = res["last_name"].toLowerCase();
-                let some_link = `https://api-nba-v1.p.rapidapi.com/players?search=${playerName}`;
+                playerFirstName = res["first_name"];
+                playerLastName = res["last_name"];
+                let some_link = `https://api-nba-v1.p.rapidapi.com/players?search=${playerLastName}`;
                 lookupPlayer(some_link);
-                console.log(res, playerName, some_link);
+
             })
             .catch(err => console.error(err));
-
     };
 
     const lookupPlayer = (playerUrl) => {
@@ -39,8 +41,13 @@ function WhpfPage() {
         fetch(playerUrl, options)
             .then(res => res.json())
             .then(res => {
-                setMoreInfo(res.response);
-                console.log(res.response);
+                let searchResults = res.response.map(output => output);
+                for (let i = 0; i < searchResults.length; i++) {
+                    if (searchResults[i]["firstname"] === playerFirstName) {
+                        setMoreInfo(searchResults[i]);
+                        console.log(searchResults[i]);
+                    }
+                }
             })
             .catch(err => console.error(err));
     }
@@ -98,10 +105,11 @@ function WhpfPage() {
             <div><button onClick={getMoreInfo}> More info </button></div>
             {isHidden &&
                 (
-                    <div> 
-                        <div>Height: {rndPlayer.height_feet} feet {rndPlayer.height_inches} inches </div>
-                        <div>College: {moreInfo.map(output => output.affiliation)} </div>
-                        <div>Debut: {moreInfo.map(output => output.nba.start)}</div>
+                    <div>
+                        <div>{rndPlayer.height_feet}"{rndPlayer.height_inches}, {rndPlayer.weight_pounds} lbs</div>
+                        <div>Born: {moreInfo.birth.date} </div>
+                        <div>College: {moreInfo.affiliation} </div>
+                        <div>Debut: {moreInfo.nba.start} </div>
                     </div>
                 )
             }
