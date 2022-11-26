@@ -8,14 +8,16 @@ function HomePage() {
     return (
         <div className="Home">
 
-            <h1> NBA Index </h1>
-            <h2>
-                <Link className="App-link" to="/whpf">Who He Play For?</Link>
-            </h2>
+            <header>
+                <h1> NBA Index </h1>
+                <h2>
+                    <Link className="App-link" to="/whpf">Who He Play For?</Link>
+                </h2>
 
-            <h2>
-                <Link className="App-link" to="/rnd-game">Relive NBA History</Link>
-            </h2>
+                <h2>
+                    <Link className="App-link" to="/rnd-game">NBA Rewind</Link>
+                </h2>
+            </header>
 
             <HeadlinesPage></HeadlinesPage>
 

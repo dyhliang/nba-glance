@@ -20,12 +20,12 @@ function RandomGamePage() {
             .then(res => res.json())
             .then(res => {
                 setRndGameStats(res.response);
-                console.log(res.response)
+                console.log(res.response);
             })
             .catch(err => console.error(err));
     };
 
-    function GetMoreInfo(id){
+    function getMoreInfo(id) {
         const options = {
             method: 'GET',
             headers: {
@@ -49,28 +49,24 @@ function RandomGamePage() {
 
     return (
         <div className="App">
-            <h1> Random Game Highlight</h1>
+            <h1> Random Game Highlight </h1>
             <ul>
                 {rndGameStats.map(output =>
-                    <div> {output.date.start.slice(0, 10)}
+                    <div>
+                        <div>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}</div>
                         <br></br>
-                        {output.teams.home.name} {output.scores.home.points} - {output.teams.visitors.name} {output.scores.visitors.points}
-                        <br></br>
-                        @ {output.arena.name} in {output.arena.city}
-                        <br></br>
-                        (Story): {output.nugget}
-                        
+                        <div>{output.teams.home.name} {output.scores.home.points} - {output.teams.visitors.name} {output.scores.visitors.points}</div>
+
+                        <div>Story - {output.nugget} </div>
+
                         (ID): {output.id}
-                        <br></br>
+
                     </div>)}
             </ul>
 
             <br></br>
-            <button onClick={() => setMoreInfo(moreInfo)}>More stats from this game</button>
-
-
             <footer>
-                <Link className="App-link" to="/">Back to the Home Page</Link>
+                <div><Link className="App-link" to="/">Back to the Home Page</Link></div>
             </footer>
         </div>
     );

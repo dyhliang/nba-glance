@@ -21,12 +21,14 @@ function HeadlinesPage() {
 
     return (
         <div className="App">
-            <h2>Headlines from Around the League</h2>
-            <ul>
+            <table>
+                <h1>
+                    Headlines from Around the League
+                </h1>
                 {news.map((article) => (
-                    <li>{article.title}</li>
+                    <tr>{article.title}</tr>
                 ))}
-            </ul>
+            </table>
             <br></br>
         </div>
     )

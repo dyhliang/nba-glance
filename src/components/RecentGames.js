@@ -34,9 +34,7 @@ function RecentGamesPage() {
     return (
         <div className="App">
             <h1> Most Recent Games </h1>
-            <h5> NOTE: The API only shows the current day's games after the first tipoff, refer to a schedule for this time.
-                Otherwise, if games haven't tipped off yet, this will show the previous day's scores.
-            </h5>
+        
             <ul>
                 {RecentGames.map(output => <div>{output.teams.home.name} {output.scores.home.points}  -  {output.teams.visitors.name} {output.scores.visitors.points} ({output.status.long[0]})</div>)}
             </ul>
