@@ -1,11 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 let teamName = "";
 let playerFirstName = "";
 let playerLastName = "";
 
+
+let notifyUser = (message) => {
+    toast(message, {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    })
+}
+
+const message = "🤔 Stuck? Check out the More Info tab for hints!";
+notifyUser(message);
+
 function WhpfPage() {
+
     const [rndPlayer, setRndPlayer] = useState([]);
     const [guess, setGuess] = useState("");
     const [feedback, setFeedback] = useState("");
@@ -74,6 +93,17 @@ function WhpfPage() {
 
     return (
         <div className="App">
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             <h5>
                 <a href='https://www.youtube.com/watch?v=8avNI5Tgzfs'><i>Inspired by the TNT segment</i></a>
             </h5>
@@ -112,7 +142,8 @@ function WhpfPage() {
                         <div>{rndPlayer.height_feet}-{rndPlayer.height_inches}, {rndPlayer.weight_pounds}lbs ({moreInfo.height.meters}m, {moreInfo.weight.kilograms}kgs)</div>
                         <div>Born: {moreInfo.birth.date} </div>
                         <div>College: {moreInfo.affiliation} </div>
-                        <div>Debut: {moreInfo.nba.start} -- Years Pro: {moreInfo.nba.pro}</div>
+                        <div>Debut: {moreInfo.nba.start} </div>
+                        <div>Years Pro: {moreInfo.nba.pro}</div>
                     </div>
                 )
             }

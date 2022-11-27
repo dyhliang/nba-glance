@@ -52,6 +52,7 @@ function RandomGamePage() {
                     <div>Story - {output.nugget} </div>
                 </div>)}
 
+            <br></br>
             <div><button onClick={getMoreInfo}> Toggle Linescore </button></div>
             {isHidden &&
                 (moreInfo.map(output =>
@@ -83,6 +84,7 @@ function RandomGamePage() {
                                 <td>{output.scores.visitors.linescore[3]}</td>
                                 <td>{output.scores.visitors.linescore[4]}</td>
                             </tr>
+                            <tr>Lead Changes: {output.leadChanges}, Times Tied: {output.timesTied}</tr>
                         </tbody>
                     </table>
                 ))
