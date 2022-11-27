@@ -46,22 +46,47 @@ function RandomGamePage() {
             <h1> Random Game Highlight </h1>
             {rndGameStats.map(output =>
                 <div>
-                    <div>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}</div>
-                    <div>{output.teams.home.name} {output.scores.home.points} - {output.teams.visitors.name} {output.scores.visitors.points}</div>
+                    <h2>{output.teams.home.name} {output.scores.home.points} - {output.teams.visitors.name} {output.scores.visitors.points}</h2>
+                    <div>{output.date.start.slice(0, 10)} </div>
+                    <div>{output.arena.name} in {output.arena.city}</div>
                     <div>Story - {output.nugget} </div>
                 </div>)}
 
-            <div><button onClick={getMoreInfo}> More info </button></div>
+            <div><button onClick={getMoreInfo}> Toggle Linescore </button></div>
             {isHidden &&
                 (moreInfo.map(output =>
-                    <div>
-                        <div>Team records after this game:</div>
-                        <div>{output.teams.home.name} ({output.scores.home.win}-{output.scores.home.loss})</div>
-                        <div>{output.teams.visitors.name} ({output.scores.visitors.win}-{output.scores.visitors.loss})</div>
-                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> Quarters </th>
+                                <th> 1 </th>
+                                <th> 2 </th>
+                                <th> 3 </th>
+                                <th> 4 </th>
+                                <th> OT </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{output.teams.home.name} ({output.scores.home.win}-{output.scores.home.loss}) </td>
+                                <td>{output.scores.home.linescore[0]}</td>
+                                <td>{output.scores.home.linescore[1]}</td>
+                                <td>{output.scores.home.linescore[2]}</td>
+                                <td>{output.scores.home.linescore[3]}</td>
+                                <td>{output.scores.home.linescore[4]}</td>
+                            </tr>
+                            <tr>
+                                <td>{output.teams.visitors.name} ({output.scores.visitors.win}-{output.scores.visitors.loss}) </td>
+                                <td>{output.scores.visitors.linescore[0]}</td>
+                                <td>{output.scores.visitors.linescore[1]}</td>
+                                <td>{output.scores.visitors.linescore[2]}</td>
+                                <td>{output.scores.visitors.linescore[3]}</td>
+                                <td>{output.scores.visitors.linescore[4]}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 ))
             }
-
             <br></br>
             <button onClick={refreshPage}> Another Game </button>
             <br></br>

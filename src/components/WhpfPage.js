@@ -106,10 +106,10 @@ function WhpfPage() {
             {isHidden &&
                 (
                     <div>
-                        <div>{rndPlayer.height_feet}"{rndPlayer.height_inches}, {rndPlayer.weight_pounds} lbs</div>
+                        <div>{rndPlayer.height_feet}-{rndPlayer.height_inches}, {rndPlayer.weight_pounds}lbs ({moreInfo.height.meters}m, {moreInfo.weight.kilograms}kgs)</div>
                         <div>Born: {moreInfo.birth.date} </div>
                         <div>College: {moreInfo.affiliation} </div>
-                        <div>Debut: {moreInfo.nba.start} </div>
+                        <div>Debut: {moreInfo.nba.start} -- Years Pro: {moreInfo.nba.pro}</div> 
                     </div>
                 )
             }
