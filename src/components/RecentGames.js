@@ -33,8 +33,8 @@ function RecentGamesPage() {
 
     return (
         <div className="App">
-            <h1> Recent Scores </h1>
-            <h5> (S = Scheduled to play, F = Final)</h5>
+            <h1> Scores </h1>
+            <h5> <i>(S = Scheduled to play, I = In Progress, F = Final)</i> </h5>
             <table>
                 <thead>
                     {RecentGames.map(output => <tr>{output.teams.home.name} {output.scores.home.points}  -  {output.teams.visitors.name} {output.scores.visitors.points} ({output.status.long[0]})</tr>)}

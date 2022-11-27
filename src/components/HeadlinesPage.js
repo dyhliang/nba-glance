@@ -21,10 +21,8 @@ function HeadlinesPage() {
 
     return (
         <div className="App">
+            <h1>Headlines</h1>
             <table>
-                <h1>
-                    Headlines
-                </h1>
                 {news.map((article) => (
                     <tr>-{article.title}</tr>
                 ))}

@@ -7,18 +7,26 @@ import WestStandingsPage from './WestStandingsPage';
 
 function HomePage() {
     return (
-        <div className="row">
-
-            <header>
-                <h1> NBA Index </h1>
-                <h2>
-                    <Link className="App-link" to="/whpf">Who He Play For?</Link>
-                </h2>
-
-                <h2>
-                    <Link className="App-link" to="/rnd-game">NBA Rewind</Link>
-                </h2>
-            </header>
+        <div className="home">
+            <div class='row'>
+                <table>
+                    <tr>
+                        <td><h1> NBA Index </h1></td>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <td>
+                            <h2>
+                                <Link className="App-link" to="/whpf">Who He Play For?</Link>
+                            </h2>
+                        </td>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <td>
+                            <h2>
+                                <Link className="App-link" to="/rnd-game">NBA Rewind</Link>
+                            </h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
             <div class='column'>
                 <HeadlinesPage></HeadlinesPage>

@@ -87,7 +87,7 @@ function WhpfPage() {
             <form onSubmit={(event) => {
                 event.preventDefault();
             }}
-            >Your guess:
+            >Your guess: <br></br>
                 <input
                     type='text'
                     id='user-guess'
@@ -102,18 +102,22 @@ function WhpfPage() {
                 <br></br>
             </form>
 
-            <div><button onClick={getMoreInfo}> More info </button></div>
+            <div>
+                <button onClick={getMoreInfo}> More info </button>
+            </div>
             {isHidden &&
                 (
                     <div>
+                        <br></br>
                         <div>{rndPlayer.height_feet}-{rndPlayer.height_inches}, {rndPlayer.weight_pounds}lbs ({moreInfo.height.meters}m, {moreInfo.weight.kilograms}kgs)</div>
                         <div>Born: {moreInfo.birth.date} </div>
                         <div>College: {moreInfo.affiliation} </div>
-                        <div>Debut: {moreInfo.nba.start} -- Years Pro: {moreInfo.nba.pro}</div> 
+                        <div>Debut: {moreInfo.nba.start} -- Years Pro: {moreInfo.nba.pro}</div>
                     </div>
                 )
             }
 
+            <br></br>
             <button onClick={refreshPage}> Another Player </button>
             <footer>
                 <br></br>
