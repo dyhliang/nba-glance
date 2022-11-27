@@ -24,7 +24,6 @@ function RandomGamePage() {
             .then(res => {
                 setRndGameStats(res.response);
                 setMoreInfo(res.response);
-                console.log(res.response);
             })
             .catch(err => console.error(err));
     };
@@ -54,6 +53,7 @@ function RandomGamePage() {
 
             <br></br>
             <div><button onClick={getMoreInfo}> Toggle Linescore </button></div>
+            <br></br>
             {isHidden &&
                 (moreInfo.map(output =>
                     <table>

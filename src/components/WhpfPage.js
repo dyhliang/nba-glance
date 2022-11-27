@@ -37,13 +37,10 @@ function WhpfPage() {
             .then(res => res.json())
             .then(res => {
                 setRndPlayer(res);
-                console.log(res);
                 teamName = res["team"]["full_name"];
                 playerFirstName = res["first_name"];
                 playerLastName = res["last_name"];
-                let some_link = `https://api-nba-v1.p.rapidapi.com/players?search=${playerLastName}`;
-                lookupPlayer(some_link);
-
+                lookupPlayer(`https://api-nba-v1.p.rapidapi.com/players?search=${playerLastName}`);
             })
             .catch(err => console.error(err));
     };
@@ -105,7 +102,7 @@ function WhpfPage() {
                 pauseOnHover
             />
             <h5>
-                <a href='https://www.youtube.com/watch?v=8avNI5Tgzfs'><i>Inspired by the TNT segment</i></a>
+                <a href='https://www.youtube.com/watch?v=8avNI5Tgzfs'> <i>Inspired by the TNT segment</i></a>
             </h5>
             <h1> Who He Play For? </h1>
 
