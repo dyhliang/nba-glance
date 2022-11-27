@@ -115,7 +115,6 @@ function WhpfPage() {
             }
 
             <button onClick={refreshPage}> Another Player </button>
-
             <footer>
                 <br></br>
                 <Link className="App-link" to="/">Back to the Home Page</Link>

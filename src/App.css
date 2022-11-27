@@ -22,11 +22,8 @@ body {
 }
 
 .App {
-  padding: 4rem;
-
+  padding: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -42,36 +39,26 @@ h1 {
   width: fit-content;
 }
 
-.east {
-  align-items: left;
+button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
 }
 
-.west {
-  align-content: right;
+.column {
+  float: left;
+  width: 33.3%;
 }
 
-
-.empty {
-  width: 100%;
-  margin-top: 3rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.empty h2 {
-  font-size: 1.25rem;
-  color: #b90e0a;
-  font-family: var(--font-raleway);
-}
-
-.container {
-  width: 100%;
-  margin-top: 3rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

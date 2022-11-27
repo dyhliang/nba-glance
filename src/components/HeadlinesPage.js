@@ -26,10 +26,10 @@ function HeadlinesPage() {
                     Headlines
                 </h1>
                 {news.map((article) => (
-                    <tr>{article.title}</tr>
+                    <tr>-{article.title}</tr>
                 ))}
             </table>
-            <br></br>
+
         </div>
     )
 }

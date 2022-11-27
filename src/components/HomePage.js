@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeadlinesPage from './HeadlinesPage';
 import RecentGamesPage from './RecentGames';
-import StandingsPage from './StandingsPage';
+import EastStandingsPage from './EastStandingsPage';
+import WestStandingsPage from './WestStandingsPage';
 
 function HomePage() {
     return (
-        <div className="Home">
+        <div className="row">
 
             <header>
                 <h1> NBA Index </h1>
@@ -19,11 +20,18 @@ function HomePage() {
                 </h2>
             </header>
 
-            <HeadlinesPage></HeadlinesPage>
+            <div class='column'>
+                <HeadlinesPage></HeadlinesPage>
+                <RecentGamesPage></RecentGamesPage>
+            </div>
 
-            <RecentGamesPage></RecentGamesPage>
+            <div class='column'>
+                <EastStandingsPage></EastStandingsPage>
+            </div>
 
-            <StandingsPage></StandingsPage>
+            <div class='column'>
+                <WestStandingsPage></WestStandingsPage>
+            </div>
 
         </div>
     );
