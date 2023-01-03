@@ -2,13 +2,13 @@
  A ReactJS app that shows NBA scores, stats, and standings.
  
  To be added:
- ## CSS elements to improve aesthetic of front page
- ## Getting access to an API that allows me to use player images/likenesses
+ - CSS elements to improve aesthetic of front page
+ - Getting access to an API that allows me to use player images/likenesses
  
 # Previews
 <img width="1199" alt="Screenshot 2022-12-14 at 9 09 11 PM" src="https://user-images.githubusercontent.com/102781030/210444020-b2357050-df80-45b8-b708-fcf8b9963124.png">
-<img width="1117" alt="Screenshot 2022-12-14 at 9 09 30 PM" src="https://user-images.githubusercontent.com/102781030/210444034-a68676a9-14ed-4858-be86-73d32ce76b13<img width="516" alt="Screenshot 2022-12-14 at 9 08 39 PM" src="https://user-images.githubusercontent.com/102781030/210444073-5d2c6b24-7749-44a0-8bc0-91073c89b6ff.png">
-.png">
+<img width="1117" alt="Screenshot 2022-12-14 at 9 09 30 PM" src="https://user-images.githubusercontent.com/102781030/210444034-a68676a9-14ed-4858-be86-73d32ce76b13.png">
+<img width="516" alt="Screenshot 2022-12-14 at 9 08 39 PM" src="https://user-images.githubusercontent.com/102781030/210444073-5d2c6b24-7749-44a0-8bc0-91073c89b6ff.png">
 <img width="674" alt="Screenshot 2022-12-14 at 9 08 54 PM" src="https://user-images.githubusercontent.com/102781030/210444086-29df48d2-79ad-4dcb-bf68-712de67c3832.png">
 
 
