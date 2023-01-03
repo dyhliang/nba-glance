@@ -1,4 +1,4 @@
-# nba-index
+# NBA Index
  A ReactJS app that shows NBA scores, stats, and standings.
  
  To be added:
