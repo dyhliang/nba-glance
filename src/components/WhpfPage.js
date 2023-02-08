@@ -7,7 +7,6 @@ let teamName = "";
 let playerFirstName = "";
 let playerLastName = "";
 
-
 let notifyUser = (message) => {
     toast(message, {
         position: 'top-center',
@@ -20,7 +19,7 @@ let notifyUser = (message) => {
     })
 }
 
-const message = "🤔 Check out the More Info tab for more info!";
+const message = "🤔 Check out the More Info tab to learn more about this player!";
 notifyUser(message);
 
 function WhpfPage() {
