@@ -20,7 +20,7 @@ let notifyUser = (message) => {
     })
 }
 
-const message = "🤔 Stuck? Check out the More Info tab for hints!";
+const message = "🤔 Check out the More Info tab for more info!";
 notifyUser(message);
 
 function WhpfPage() {
