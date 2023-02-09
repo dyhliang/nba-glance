@@ -22,6 +22,7 @@ function RandomGamePage() {
         fetch(new_url, options)
             .then(res => res.json())
             .then(res => {
+                console.log(res);
                 setRndGameStats(res.response);
                 setMoreInfo(res.response);
             })

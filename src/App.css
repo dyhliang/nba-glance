@@ -43,13 +43,12 @@ h1 {
 
 button {
   background-color: #4CAF50;
-  /* Green */
   border: none;
   color: white;
-  padding: 3.5px 4px;
+  padding: 3.1px 3.1px;
   text-align: center;
   display: inline-block;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .column {

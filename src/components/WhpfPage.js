@@ -1,28 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-let teamName = "";
-let playerFirstName = "";
-let playerLastName = "";
-
-let notifyUser = (message) => {
-    toast(message, {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-    })
-}
-
-const message = "🤔 Check out the More Info tab to learn more about this player!";
-notifyUser(message);
-
 function WhpfPage() {
+    let teamName = "";
+    let playerFirstName = "";
+    let playerLastName = "";
 
     const [rndPlayer, setRndPlayer] = useState([]);
     const [guess, setGuess] = useState("");
@@ -89,17 +72,6 @@ function WhpfPage() {
 
     return (
         <div className="App">
-            <ToastContainer
-                position="top-center"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            />
             <h5>
                 <a href='https://www.youtube.com/watch?v=8avNI5Tgzfs'> <i>Inspired by the TNT segment</i></a>
             </h5>
@@ -107,7 +79,7 @@ function WhpfPage() {
 
             <br></br>
 
-            <h2>{rndPlayer.first_name} {rndPlayer.last_name} - ({rndPlayer.position}) </h2>
+            <h2>{rndPlayer.first_name} {rndPlayer.last_name} ({rndPlayer.position}) </h2>
 
             <br></br>
             <form onSubmit={(event) => {
@@ -129,7 +101,7 @@ function WhpfPage() {
             </form>
 
             <div>
-                <button onClick={getMoreInfo}> More info </button>
+                <button onClick={getMoreInfo}> Toggle player info </button>
             </div>
             {isHidden &&
                 (
