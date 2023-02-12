@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
+
+let teamName = "";
+let playerFirstName = "";
+let playerLastName = "";
 
 function WhpfPage() {
-    let teamName = "";
-    let playerFirstName = "";
-    let playerLastName = "";
 
     const [rndPlayer, setRndPlayer] = useState([]);
     const [guess, setGuess] = useState("");
@@ -22,6 +22,7 @@ function WhpfPage() {
                 teamName = res["team"]["full_name"];
                 playerFirstName = res["first_name"];
                 playerLastName = res["last_name"];
+                console.log(`https://www.balldontlie.io/api/v1/players/${randomNum}`);
                 lookupPlayer(`https://api-nba-v1.p.rapidapi.com/players?search=${playerLastName}`);
             })
             .catch(err => console.error(err));
