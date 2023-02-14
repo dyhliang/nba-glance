@@ -54,12 +54,10 @@ function RewindPage() {
         <div className="App">
             <Header></Header>
 
-            <button onClick={refreshPage}> Rewind </button>
             {rndGameStats.map((output) =>
                 <div>
-                    <h4>On {output.date.start.slice(0, 10)}</h4>
-                    <h4>At {output.arena.name} in {output.arena.city}, {output.arena.state}</h4>
-                    <div>Story - {output.nugget} </div>
+                    <h4>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}, {output.arena.state}</h4>
+                    <div>Highlight: {output.nugget} </div>
                 </div>)}
 
             {moreStats.map(output =>
@@ -68,7 +66,7 @@ function RewindPage() {
                 </div>)}
 
             <br></br>
-            
+
             {moreInfo.map(output =>
                 <table>
                     <thead>
@@ -79,7 +77,7 @@ function RewindPage() {
                             <th> 3 </th>
                             <th> 4 </th>
                             <th> OT </th>
-                            <th> Final </th>
+                            <th> F </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -101,12 +99,12 @@ function RewindPage() {
                             <td>{output.scores.visitors.linescore[4]}</td>
                             <td>{output.scores.visitors.points}</td>
                         </tr>
-                
+
                     </tbody>
                     <tr>Lead Changes: {output.leadChanges}, Times Tied: {output.timesTied}</tr>
                 </table>
             )}
-
+            <button onClick={refreshPage}> Rewind Again </button>
 
         </div>
     );
