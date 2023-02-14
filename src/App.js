@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage';
-import RandomGamePage from './components/RandomGamePage';
+import RewindPage from './components/RewindPage';
+import SeedingPage from './components/SeedingPage';
+import StandingsPage from './components/StandingsPage';
 import WhpfPage from './components/WhpfPage';
 
 function App() {
@@ -15,12 +17,20 @@ function App() {
                             <HomePage />
                         </Route>
 
+                        <Route path="/standings" exact>
+                            <StandingsPage />
+                        </Route>
+
+                        <Route path="/matchups" exact>
+                            <SeedingPage />
+                        </Route>
+
                         <Route path="/whpf">
                             <WhpfPage />
                         </Route>
 
-                        <Route path="/rnd-game">
-                            <RandomGamePage />
+                        <Route path="/rewind">
+                            <RewindPage />
                         </Route>
                     </header>
                 </Router>

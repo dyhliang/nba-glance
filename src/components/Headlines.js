@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function HeadlinesPage() {
+function Headlines() {
     const [news, setNews] = useState([]);
 
     const GetNews = () => {
@@ -24,7 +24,7 @@ function HeadlinesPage() {
             <h1>Headlines</h1>
             <table>
                 {news.map((article) => (
-                    <tr>-{article.title}</tr>
+                    <tr>* {article.title}</tr>
                 ))}
             </table>
 
@@ -33,4 +33,4 @@ function HeadlinesPage() {
 }
 
 
-export default HeadlinesPage;
+export default Headlines;

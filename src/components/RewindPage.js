@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 let randomNum = (Math.floor(Math.random() * (9000 - 1 + 1)) + 1).toString();
 
-function RandomGamePage() {
+function RewindPage() {
     const [rndGameStats, setRndGameStats] = useState([]);
+    const [moreStats, setMoreStats] = useState([]);
     const [moreInfo, setMoreInfo] = useState([]);
     const [isHidden, setIsHidden] = useState(false);
 
@@ -29,6 +30,18 @@ function RandomGamePage() {
             .catch(err => console.error(err));
     };
 
+    const getMoreStats = () => {
+        let game_url = `'https://api-nba-v1.p.rapidapi.com/games/statistics?id=${randomNum}`
+
+        fetch(game_url, options)
+            .then(res => res.json())
+            .then(res => {
+                console.log(res.response);
+                setMoreStats(res.response);
+            })
+            .catch(err => console.error(err));
+    }
+
     const getMoreInfo = event => {
         setIsHidden(current => !current);
     }
@@ -39,17 +52,22 @@ function RandomGamePage() {
 
     useEffect(() => {
         getRndGame();
+        getMoreStats();
     }, []);
 
     return (
         <div className="App">
-            <h1> Random Game Highlight </h1>
-            {rndGameStats.map(output =>
+            <h1> NBA Rewind </h1>
+            {rndGameStats.map((output) =>
                 <div>
+                    <h4>Date: {output.date.start.slice(0, 10)} &nbsp; &nbsp; &nbsp; &nbsp; Venue: {output.arena.name} in {output.arena.city}, {output.arena.state}</h4>
                     <h2>{output.teams.home.name} {output.scores.home.points} - {output.teams.visitors.name} {output.scores.visitors.points}</h2>
-                    <div>{output.date.start.slice(0, 10)} </div>
-                    <div>{output.arena.name} in {output.arena.city}</div>
                     <div>Story - {output.nugget} </div>
+                </div>)}
+
+            {moreStats.map((output) =>
+                <div>
+                    <h4>Fastbreak Points: {output.fastBreakPoints} </h4>
                 </div>)}
 
             <br></br>
@@ -101,4 +119,4 @@ function RandomGamePage() {
 
 };
 
-export default RandomGamePage;
+export default RewindPage;

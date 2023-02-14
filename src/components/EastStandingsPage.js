@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function StandingsPage() {
+function EastStandingsPage() {
 
     const [AtlanticStandings, setAtlanticStandings] = useState([]);
     const [CentralStandings, setCentralStandings] = useState([]);
@@ -109,4 +109,4 @@ function StandingsPage() {
     )
 }
 
-export default StandingsPage;
+export default EastStandingsPage;
