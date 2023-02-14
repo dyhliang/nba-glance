@@ -56,11 +56,11 @@ function StandingsPage() {
                 <table>
                     <thead>
                         <tr>
-                            <th>Team</th>
-                            <th>W-L</th>
-                            <th>Pct</th>
-                            <th>GB</th>
-                            <th>L10</th>
+                            <th> Team </th>
+                            <th> W-L </th>
+                            <th> Pct </th>
+                            <th> GB </th>
+                            <th> L10 </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -73,11 +73,11 @@ function StandingsPage() {
                 <table>
                     <thead>
                         <tr>
-                            <th>Team</th>
-                            <th>W-L</th>
-                            <th>Pct</th>
-                            <th>GB</th>
-                            <th>L10</th>
+                            <th> Team </th>
+                            <th> W-L </th>
+                            <th> Pct </th>
+                            <th> GB </th>
+                            <th> L10 </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -90,11 +90,11 @@ function StandingsPage() {
                 <table>
                     <thead>
                         <tr>
-                            <th>Team</th>
-                            <th>W-L</th>
-                            <th>Pct</th>
-                            <th>GB</th>
-                            <th>L10</th>
+                            <th> Team </th>
+                            <th> W-L </th>
+                            <th> Pct </th>
+                            <th> GB </th>
+                            <th> L10 </th>
                         </tr>
                     </thead>
                     <tbody>
