@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function SeedingPage() {
 
     return (
         <div className='matchups'>
-            <h1>If playoffs started today</h1>
-            <br></br>
-            <footer>
-                <br></br>
-                <Link className="App-link" to="/">Back to the Home Page</Link>
-            </footer>
+            <Header></Header>
+
+            <h2>If Playoffs Started Today...</h2>
 
         </div>
     )

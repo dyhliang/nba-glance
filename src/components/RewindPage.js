@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 let randomNum = (Math.floor(Math.random() * (9000 - 1 + 1)) + 1).toString();
 
@@ -57,7 +58,9 @@ function RewindPage() {
 
     return (
         <div className="App">
-            <h1> NBA Rewind </h1>
+            <Header></Header>
+
+            <button onClick={refreshPage}> Rewind </button>
             {rndGameStats.map((output) =>
                 <div>
                     <h4>Date: {output.date.start.slice(0, 10)} &nbsp; &nbsp; &nbsp; &nbsp; Venue: {output.arena.name} in {output.arena.city}, {output.arena.state}</h4>
@@ -108,12 +111,8 @@ function RewindPage() {
                     </table>
                 ))
             }
-            <br></br>
-            <button onClick={refreshPage}> Another Game </button>
-            <br></br>
-            <footer>
-                <div><Link className="App-link" to="/">Back to the Home Page</Link></div>
-            </footer>
+
+
         </div>
     );
 

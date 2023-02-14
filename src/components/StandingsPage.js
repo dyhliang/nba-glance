@@ -1,11 +1,13 @@
 import React from 'react';
 import EastStandingsPage from './EastStandingsPage';
 import WestStandingsPage from './WestStandingsPage';
-import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function StandingsPage() {
     return (
         <div className="standings">
+            <Header></Header>
+
             <div class='column'>
                 <EastStandingsPage></EastStandingsPage>
             </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 let teamName = "";
 let playerFirstName = "";
@@ -73,11 +74,12 @@ function WhpfPage() {
 
     return (
         <div className="App">
+            <Header></Header>
+
+            <h1> Who He Play For? </h1>
             <h5>
                 <a href='https://www.youtube.com/watch?v=8avNI5Tgzfs'> <i>Inspired by the TNT segment</i></a>
             </h5>
-            <h1> Who He Play For? </h1>
-
             <br></br>
 
             <h2>{rndPlayer.first_name} {rndPlayer.last_name} ({rndPlayer.position}) </h2>
@@ -119,10 +121,6 @@ function WhpfPage() {
 
             <br></br>
             <button onClick={refreshPage}> Another Player </button>
-            <footer>
-                <br></br>
-                <Link className="App-link" to="/">Back to the Home Page</Link>
-            </footer>
 
         </div>
     );
