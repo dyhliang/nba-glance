@@ -21,7 +21,7 @@ function RecentGamesPage() {
         fetch(`https://api-nba-v1.p.rapidapi.com/games?date=${todaysDate}`, options)
             .then(res => res.json())
             .then(res => {
-                console.log(todaysDate);
+                console.log(res.response);
                 setRecentGames(res.response);
             })
             .catch(err => console.error(err));
@@ -37,7 +37,7 @@ function RecentGamesPage() {
             <h5> <i>(S = Scheduled to play, I = In Progress, F = Final)</i> </h5>
             <table>
                 <thead>
-                    {RecentGames.map(output => <tr>{output.teams.home.name} {output.scores.home.points}  -  {output.teams.visitors.name} {output.scores.visitors.points} ({output.status.long[0]})</tr>)}
+                    {RecentGames.map(output => <tr>{output.teams.home.nickname} {output.scores.home.points}  -  {output.teams.visitors.nickname} {output.scores.visitors.points} ({output.status.long[0]})</tr>)}
                 </thead>
             </table>
         </div>

@@ -4,6 +4,7 @@ import HeadlinesPage from './HeadlinesPage';
 import RecentGamesPage from './RecentGames';
 import EastStandingsPage from './EastStandingsPage';
 import WestStandingsPage from './WestStandingsPage';
+import SeedingPage from './SeedingPage';
 
 function HomePage() {
     return (
@@ -22,6 +23,12 @@ function HomePage() {
                         <td>
                             <h2>
                                 <Link className="App-link" to="/rnd-game">NBA Rewind</Link>
+                            </h2>
+                        </td>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <td>
+                            <h2>
+                                <Link className="App-link" to="/matchups">Playoffs Matchups</Link>
                             </h2>
                         </td>
                     </tr>

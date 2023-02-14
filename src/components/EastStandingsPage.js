@@ -65,7 +65,7 @@ function StandingsPage() {
                     </thead>
                     <tbody>
                         {AtlanticStandings.map(output =>
-                            <tr><td>{output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
+                            <tr><td>({output.conference.rank}) {output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
                     </tbody>
                 </table>
                 <br></br>
@@ -82,7 +82,7 @@ function StandingsPage() {
                     </thead>
                     <tbody>
                         {CentralStandings.map(output =>
-                            <tr><td>{output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
+                            <tr><td>({output.conference.rank}) {output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
                     </tbody>
                 </table>
                 <br></br>
@@ -99,7 +99,7 @@ function StandingsPage() {
                     </thead>
                     <tbody>
                         {SoutheastStandings.map(output =>
-                            <tr><td>{output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
+                            <tr><td>({output.conference.rank}) {output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
                     </tbody>
                 </table>
                 <br></br>

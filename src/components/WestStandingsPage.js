@@ -65,7 +65,7 @@ function WestStandingsPage() {
                     </thead>
                     <tbody>
                         {NorthwestStandings.map(output =>
-                            <tr><td>{output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
+                            <tr><td>({output.conference.rank}) {output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
                     </tbody>
                 </table>
                 <br></br>
@@ -73,7 +73,7 @@ function WestStandingsPage() {
                 <table>
                     <thead>
                         <tr>
-                            <th>Team</th>
+                            <th>Team</th>&nbsp;
                             <th>W-L</th>
                             <th>Pct</th>
                             <th>GB</th>
@@ -82,7 +82,7 @@ function WestStandingsPage() {
                     </thead>
                     <tbody>
                         {PacificStandings.map(output =>
-                            <tr><td>{output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
+                            <tr><td>({output.conference.rank}) {output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
                     </tbody>
                 </table>
                 <br></br>
@@ -90,7 +90,7 @@ function WestStandingsPage() {
                 <table>
                     <thead>
                         <tr>
-                            <th>Team</th>
+                            <th>Team</th>&nbsp;
                             <th>W-L</th>
                             <th>Pct</th>
                             <th>GB</th>
@@ -99,7 +99,7 @@ function WestStandingsPage() {
                     </thead>
                     <tbody>
                         {SouthwestStandings.map(output =>
-                            <tr><td>{output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
+                            <tr><td>({output.conference.rank}) {output.team.name}</td> <td>{output.win.total}-{output.loss.total}</td> <td>{output.win.percentage.slice(1,5)}</td> <td>{output.gamesBehind}</td> <td>{output.win.lastTen}-{10 - output.win.lastTen}</td></tr>)}
                     </tbody>
                 </table>
                 <br></br>
