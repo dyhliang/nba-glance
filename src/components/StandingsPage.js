@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
 
-
 function StandingsPage() {
 
     const [AtlanticStandings, setAtlanticStandings] = useState([]);

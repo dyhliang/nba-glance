@@ -29,7 +29,6 @@ function Headlines() {
                     <tr> * {article.title}</tr>
                 ))}
             </table>
-
         </div>
     )
 }

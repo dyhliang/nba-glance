@@ -99,11 +99,12 @@ function RewindPage() {
                             <td>{output.scores.visitors.linescore[4]}</td>
                             <td>{output.scores.visitors.points}</td>
                         </tr>
-
                     </tbody>
-                    <tr>Lead Changes: {output.leadChanges}, Times Tied: {output.timesTied}</tr>
+                    <tfoot><tr>Lead Changes: {output.leadChanges} &nbsp; &nbsp; Times Tied: {output.timesTied}</tr></tfoot>
                 </table>
             )}
+            <br></br>
+            <br></br>
             <button onClick={refreshPage}> Rewind Again </button>
 
         </div>
