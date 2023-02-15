@@ -190,7 +190,6 @@ function StandingsPage() {
                     </tbody>
                 </table>
                 <br></br>
-
             </div>
         </div>
     )
