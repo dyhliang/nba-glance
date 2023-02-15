@@ -23,7 +23,6 @@ function WhpfPage() {
                 teamName = res["team"]["full_name"];
                 playerFirstName = res["first_name"];
                 playerLastName = res["last_name"];
-                console.log(`https://www.balldontlie.io/api/v1/players/${randomNum}`);
                 lookupPlayer(`https://api-nba-v1.p.rapidapi.com/players?search=${playerLastName}`);
             })
             .catch(err => console.error(err));
@@ -38,8 +37,8 @@ function WhpfPage() {
                 let searchResults = res.response.map(output => output);
                 for (let i = 0; i < searchResults.length; i++) {
                     if (searchResults[i]["firstname"] === playerFirstName) {
+                        console.log(res.response);
                         setMoreInfo(searchResults[i]);
-                        console.log(searchResults[i]);
                     }
                 }
             })
@@ -86,7 +85,7 @@ function WhpfPage() {
                 <input
                     type='text'
                     id='user-guess'
-                    placeholder="Enter full team name"
+                    placeholder="Enter: City Teamname"
                     value={guess}
                     onChange={(e) => setGuess(e.target.value)}
                 />
