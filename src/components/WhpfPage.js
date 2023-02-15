@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
+import { apikey } from './apikey';
 
 let teamName = "";
 let playerFirstName = "";
@@ -29,13 +30,7 @@ function WhpfPage() {
     };
 
     const lookupPlayer = (playerUrl) => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61',
-                'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
-        };
+        const options = apikey();
 
         fetch(playerUrl, options)
             .then(res => res.json())

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
+import { apikey } from './apikey';
 
 let randomNum = (Math.floor(Math.random() * (9000 - 1 + 1)) + 1).toString();
 
@@ -8,13 +9,7 @@ function RewindPage() {
     const [moreStats, setMoreStats] = useState([]);
     const [moreInfo, setMoreInfo] = useState([]);
 
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61',
-            'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-        }
-    };
+    const options = apikey();
 
     const getRndGame = () => {
         let new_url = `https://api-nba-v1.p.rapidapi.com/games?id=${randomNum}`
