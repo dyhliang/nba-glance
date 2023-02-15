@@ -35,10 +35,28 @@ function RecentGamesPage() {
         <div className="App">
             <h1> Scores </h1>
             <h5> <i>(S = Scheduled to play, I = In Progress, F = Final)</i> </h5>
+            <br></br>
             <table>
                 <thead>
-                    {RecentGames.map(output => <tr>{output.teams.home.nickname} {output.scores.home.points}  -  {output.teams.visitors.nickname} {output.scores.visitors.points} ({output.status.long[0]})</tr>)}
+                    <tr>
+                        <th> Home </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> Away </th>
+                    </tr>
                 </thead>
+                <tbody>
+                    {RecentGames.map(output =>
+                        <tr>
+                            <td> {output.teams.home.nickname}  </td>
+                            <td> {output.scores.home.points} </td>
+                            <td> - </td>
+                            <td> {output.scores.visitors.points} </td>
+                            <td> {output.teams.visitors.nickname} </td>
+                            <td> ({output.status.long[0]}) </td>
+                        </tr>)}
+                </tbody>
             </table>
         </div>
     )

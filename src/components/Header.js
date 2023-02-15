@@ -7,7 +7,7 @@ function Header() {
             <div class='row'>
                 <table>
                     <tr>
-                        <td><h1><Link className="App-link" to="/"> NBA-Glance </Link> </h1></td>
+                        <td><h1><Link className="App-link" to="/"> NBA Glance </Link> </h1></td>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <td>
                             <h2>

@@ -9,6 +9,11 @@ function SeedingPage() {
             <Header></Header>
 
             <h2>If Playoffs Started Today...</h2>
+            <h3>Play-In Tournament</h3>
+
+            <h2>East</h2>
+
+            <h2>West</h2>
 
         </div>
     )

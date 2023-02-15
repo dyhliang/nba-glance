@@ -95,7 +95,10 @@ function WhpfPage() {
                     value={guess}
                     onChange={(e) => setGuess(e.target.value)}
                 />
+                &nbsp; &nbsp;
                 <button onClick={checkGuess}> Guess! </button>
+                &nbsp; &nbsp;
+                <button onClick={refreshPage}> Another Player </button>
                 <br></br>
                 <br></br>
                 {feedback}
@@ -109,18 +112,16 @@ function WhpfPage() {
                 (
                     <div>
                         <br></br>
+                        <div>Jersey: #{moreInfo.leagues.standard.jersey} </div>
                         <div>{rndPlayer.height_feet}-{rndPlayer.height_inches}, {rndPlayer.weight_pounds}lbs ({moreInfo.height.meters}m, {moreInfo.weight.kilograms}kgs)</div>
                         <div>Born: {moreInfo.birth.date} </div>
                         <div>College: {moreInfo.affiliation} </div>
                         <div>Debut: {moreInfo.nba.start} </div>
-                        <div>Years Pro: {moreInfo.nba.pro}</div>
+                        <div>Years Pro: {moreInfo.nba.pro} </div>
                     </div>
                 )
             }
-
             <br></br>
-            <button onClick={refreshPage}> Another Player </button>
-
         </div>
     );
 

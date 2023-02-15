@@ -22,9 +22,11 @@ function Headlines() {
     return (
         <div className="App">
             <h1>Headlines</h1>
+            <br></br>
+            <br></br>
             <table>
                 {news.map((article) => (
-                    <tr>* {article.title}</tr>
+                    <tr> * {article.title}</tr>
                 ))}
             </table>
 
