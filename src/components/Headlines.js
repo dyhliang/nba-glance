@@ -33,5 +33,4 @@ function Headlines() {
     )
 }
 
-
 export default Headlines;
