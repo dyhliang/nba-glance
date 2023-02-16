@@ -1,4 +1,4 @@
-# NBA Index
+# NBA Glance
  A ReactJS app that shows NBA scores, stats, and standings that calls from the <a href="https://www.balldontlie.io/#introduction">balldontlie</a> and <a href="https://rapidapi.com/api-sports/api/api-nba/">API-NBA</a> APIs.
  
  To be added:
