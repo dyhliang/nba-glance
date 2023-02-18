@@ -17,13 +17,7 @@ function Header() {
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <td>
                             <h2>
-                                <Link className="App-link" to="/matchups"> Playoffs Matchups </Link>
-                            </h2>
-                        </td>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        <td>
-                            <h2>
-                                <Link className="App-link" to="/whpf"> Who He Play For? </Link>
+                                <Link className="App-link" to="/whpf"> Guess Who [He Played For]? </Link>
                             </h2>
                         </td>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;

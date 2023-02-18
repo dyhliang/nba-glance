@@ -69,7 +69,7 @@ function WhpfPage() {
         <div className="App">
             <Header></Header>
 
-            <h1> Who He Play For? </h1>
+            <h1> Guess Who [He Played For]? </h1>
             <h5>
                 <a href='https://www.youtube.com/watch?v=8avNI5Tgzfs'> <i>Inspired by the TNT segment</i></a>
             </h5>
