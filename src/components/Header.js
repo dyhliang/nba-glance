@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
         <div className="header">
-            <div class='row'>
+            <div class='top-header'>
                 <table>
                     <tr>
                         <td><h1><Link className="App-link" to="/"> NBA Glance </Link> </h1></td>

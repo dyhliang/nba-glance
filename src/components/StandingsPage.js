@@ -79,16 +79,15 @@ function StandingsPage() {
         <div>
             <Header></Header>
             <div className='column'>
-                <h1> ECF </h1>
-                <h2> Atlantic Division </h2>
+                <h2> East </h2>
                 <table>
                     <thead>
                         <tr>
-                            <th> Team </th>
-                            <th> W-L </th>
-                            <th> Pct </th>
-                            <th> GB </th>
-                            <th> L10 </th>
+                            <h3> Atlantic </h3>
+                            <th> W-L &nbsp; &nbsp; </th>
+                            <th> Pct &nbsp; &nbsp; </th>
+                            <th> GB &nbsp; &nbsp; </th>
+                            <th> L10 &nbsp; &nbsp; </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -97,15 +96,14 @@ function StandingsPage() {
                     </tbody>
                 </table>
                 <br></br>
-                <h2> Central Division </h2>
                 <table>
                     <thead>
                         <tr>
-                            <th> Team </th>
-                            <th> W-L </th>
-                            <th> Pct </th>
-                            <th> GB </th>
-                            <th> L10 </th>
+                            <h3> Central &nbsp; &nbsp; </h3>
+                            <th> W-L &nbsp; &nbsp; </th>
+                            <th> Pct &nbsp; &nbsp; </th>
+                            <th> GB &nbsp; &nbsp; </th>
+                            <th> L10 &nbsp; &nbsp; </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -114,15 +112,14 @@ function StandingsPage() {
                     </tbody>
                 </table>
                 <br></br>
-                <h2> Southeast Division </h2>
                 <table>
                     <thead>
                         <tr>
-                            <th> Team </th>
-                            <th> W-L </th>
-                            <th> Pct </th>
-                            <th> GB </th>
-                            <th> L10 </th>
+                            <h3> Southeast &nbsp; &nbsp; </h3>
+                            <th> W-L &nbsp; &nbsp; </th>
+                            <th> Pct &nbsp; &nbsp; </th>
+                            <th> GB &nbsp; &nbsp; </th>
+                            <th> L10 &nbsp; &nbsp; </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -134,16 +131,15 @@ function StandingsPage() {
             </div>
 
             <div className='column'>
-                <h1> WCF </h1>
-                <h2> Northwest Division </h2>
+                <h2> West </h2>
                 <table>
                     <thead>
                         <tr>
-                            <th> Team </th>
-                            <th> W-L </th>
-                            <th> Pct </th>
-                            <th> GB </th>
-                            <th> L10 </th>
+                            <h3> Northwest &nbsp; &nbsp; </h3>
+                            <th> W-L &nbsp; &nbsp; </th>
+                            <th> Pct &nbsp; &nbsp; </th>
+                            <th> GB &nbsp; &nbsp; </th>
+                            <th> L10 &nbsp; &nbsp; </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -152,15 +148,14 @@ function StandingsPage() {
                     </tbody>
                 </table>
                 <br></br>
-                <h2> Pacific Division </h2>
                 <table>
                     <thead>
                         <tr>
-                            <th> Team </th>
-                            <th> W-L </th>
-                            <th> Pct </th>
-                            <th> GB </th>
-                            <th> L10 </th>
+                            <h3> Pacific &nbsp; &nbsp; </h3>
+                            <th> W-L &nbsp; &nbsp; </th>
+                            <th> Pct &nbsp; &nbsp; </th>
+                            <th> GB &nbsp; &nbsp; </th>
+                            <th> L10 &nbsp; &nbsp; </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -169,15 +164,14 @@ function StandingsPage() {
                     </tbody>
                 </table>
                 <br></br>
-                <h2> Southwest Division </h2>
                 <table>
                     <thead>
                         <tr>
-                            <th> Team </th>
-                            <th> W-L </th>
-                            <th> Pct </th>
-                            <th> GB </th>
-                            <th> L10 </th>
+                            <h3> Southwest &nbsp; &nbsp; </h3>
+                            <th> W-L &nbsp; &nbsp; </th>
+                            <th> Pct &nbsp; &nbsp; </th>
+                            <th> GB &nbsp; &nbsp; </th>
+                            <th> L10 &nbsp; &nbsp; </th>
                         </tr>
                     </thead>
                     <tbody>

@@ -48,11 +48,12 @@ function RewindPage() {
     return (
         <div className="App">
             <Header></Header>
-
+            <br></br>
+            <br></br>
             {rndGameStats.map((output) =>
                 <div>
                     <h4>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}, {output.arena.state}</h4>
-                    <div>Highlight: {output.nugget} </div>
+                    <h4> {output.nugget} </h4>
                 </div>)}
 
             {moreStats.map(output =>
@@ -63,41 +64,47 @@ function RewindPage() {
             <br></br>
 
             {moreInfo.map(output =>
-                <table>
-                    <thead>
-                        <tr>
-                            <th> Teams | Quarters </th>
-                            <th> 1 </th>
-                            <th> 2 </th>
-                            <th> 3 </th>
-                            <th> 4 </th>
-                            <th> OT </th>
-                            <th> F </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{output.teams.home.name} ({output.scores.home.win}-{output.scores.home.loss}) </td>
-                            <td>{output.scores.home.linescore[0]}</td>
-                            <td>{output.scores.home.linescore[1]}</td>
-                            <td>{output.scores.home.linescore[2]}</td>
-                            <td>{output.scores.home.linescore[3]}</td>
-                            <td>{output.scores.home.linescore[4]}</td>
-                            <td>{output.scores.home.points}</td>
-                        </tr>
-                        <tr>
-                            <td>{output.teams.visitors.name} ({output.scores.visitors.win}-{output.scores.visitors.loss}) </td>
-                            <td>{output.scores.visitors.linescore[0]}</td>
-                            <td>{output.scores.visitors.linescore[1]}</td>
-                            <td>{output.scores.visitors.linescore[2]}</td>
-                            <td>{output.scores.visitors.linescore[3]}</td>
-                            <td>{output.scores.visitors.linescore[4]}</td>
-                            <td>{output.scores.visitors.points}</td>
-                        </tr>
-                    </tbody>
-                    <tfoot><tr>Lead Changes: {output.leadChanges} &nbsp; &nbsp; Times Tied: {output.timesTied}</tr></tfoot>
-                </table>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> Teams | Quarters &nbsp; &nbsp; </th>
+                                <th> 1 </th>
+                                <th> 2 </th>
+                                <th> 3 </th>
+                                <th> 4 </th>
+                                <th> OT </th>
+                                <th> F </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{output.teams.home.name} ({output.scores.home.win}-{output.scores.home.loss}) &nbsp; &nbsp; </td>
+                                <td>{output.scores.home.linescore[0]}</td>
+                                <td>{output.scores.home.linescore[1]}</td>
+                                <td>{output.scores.home.linescore[2]}</td>
+                                <td>{output.scores.home.linescore[3]}</td>
+                                <td>{output.scores.home.linescore[4]}</td>
+                                <td>{output.scores.home.points}</td>
+                            </tr>
+                            <tr>
+                                <td>{output.teams.visitors.name} ({output.scores.visitors.win}-{output.scores.visitors.loss}) </td>
+                                <td>{output.scores.visitors.linescore[0]}</td>
+                                <td>{output.scores.visitors.linescore[1]}</td>
+                                <td>{output.scores.visitors.linescore[2]}</td>
+                                <td>{output.scores.visitors.linescore[3]}</td>
+                                <td>{output.scores.visitors.linescore[4]}</td>
+                                <td>{output.scores.visitors.points}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <tr>Lead Changes: {output.leadChanges} &nbsp; &nbsp;
+                            Times Tied: {output.timesTied}</tr>
+                    </table>
+                </div>
             )}
+
             <br></br>
             <br></br>
             <button onClick={refreshPage}> Rewind Again </button>

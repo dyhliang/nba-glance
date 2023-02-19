@@ -81,11 +81,11 @@ function WhpfPage() {
             <form onSubmit={(event) => {
                 event.preventDefault();
             }}
-            >Your guess: <br></br>
+            >
                 <input
                     type='text'
                     id='user-guess'
-                    placeholder="Enter: City Teamname"
+                    placeholder="Enter: City Team Name"
                     value={guess}
                     onChange={(e) => setGuess(e.target.value)}
                 />
@@ -95,10 +95,9 @@ function WhpfPage() {
                 <button onClick={refreshPage}> Another Player </button>
                 <br></br>
                 <br></br>
-                {feedback}
-                <br></br>
             </form>
-
+            <div>{feedback}</div>
+            <br></br>
             <div>
                 <button onClick={getMoreInfo}> Toggle player info </button>
             </div>
@@ -106,12 +105,12 @@ function WhpfPage() {
                 (
                     <div>
                         <br></br>
-                        <div>Jersey: #{moreInfo.leagues.standard.jersey} </div>
+                        <div>#{moreInfo.leagues.standard.jersey} </div>
                         <div>{rndPlayer.height_feet}-{rndPlayer.height_inches}, {rndPlayer.weight_pounds}lbs ({moreInfo.height.meters}m, {moreInfo.weight.kilograms}kgs)</div>
-                        <div>Born: {moreInfo.birth.date} </div>
+                        <div>DOB: {moreInfo.birth.date} </div>
                         <div>College: {moreInfo.affiliation} </div>
-                        <div>Debut: {moreInfo.nba.start} </div>
-                        <div>Years Pro: {moreInfo.nba.pro} </div>
+                        <div>Debuted: {moreInfo.nba.start} </div>
+                        <div>Seasons Pro: {moreInfo.nba.pro} </div>
                     </div>
                 )
             }
