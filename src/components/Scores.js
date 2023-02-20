@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { apikey } from './apikey';
 
-function RecentGamesPage() {
+function Scores() {
 
     const [RecentGames, setRecentGames] = useState([]);
 
@@ -10,7 +10,7 @@ function RecentGamesPage() {
         let dd = String(today.getDate()).padStart(2, '0');
         let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
         let yyyy = today.getFullYear();
-        let todaysDate = yyyy + "-" + "02" + "-" + "17";
+        let todaysDate = yyyy + "-" + mm + "-" + dd;
 
         const options = apikey();
 
@@ -30,26 +30,23 @@ function RecentGamesPage() {
     return (
         <div className="App">
             <h1> Scores </h1>
-            <h5> <i>(S = Scheduled to play, I = In Progress, F = Final)</i> </h5>
-            <br></br>
+            <h5> <news><i>(S = Scheduled to play, I = In Progress, F = Final)</i></news> </h5>
             <table>
                 <thead>
                     <tr>
-                        <th> <highlighter> Home </highlighter> </th>
                         <th> </th>
                         <th> </th>
                         <th> </th>
-                        <th> <highlighter> Away </highlighter> </th>
                     </tr>
                 </thead>
                 <tbody>
                     {RecentGames.map(output =>
                         <tr>
-                            <td> {output.teams.home.nickname}  </td>
-                            <td> <highlighter>{output.scores.home.points}</highlighter> </td>
-                            <td> - </td>
-                            <td> <highlighter>{output.scores.visitors.points}</highlighter> </td>
                             <td> {output.teams.visitors.nickname} </td>
+                            <td> <highlighter>{output.scores.visitors.points}</highlighter> </td>
+                            <td> @ </td>
+                            <td> <highlighter>{output.scores.home.points}</highlighter> </td>
+                            <td> {output.teams.home.nickname}  </td>
                             <td> ({output.status.long[0]}) </td>
                         </tr>)}
                 </tbody>
@@ -58,4 +55,4 @@ function RecentGamesPage() {
     )
 }
 
-export default RecentGamesPage;
+export default Scores;

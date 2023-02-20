@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Headlines from './Headlines';
-import RecentGamesPage from './RecentGames';
+import Scores from './Scores';
 
 function HomePage() {
     return (
@@ -15,7 +15,7 @@ function HomePage() {
             </div>
 
             <div class='column'>
-                <RecentGamesPage></RecentGamesPage>
+                <Scores></Scores>
             </div>
         </div>
 

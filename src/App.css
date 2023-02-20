@@ -26,6 +26,11 @@ rewind {
   color: #DFDFDF;
 }
 
+news {
+  font-size: 15px;
+  color: #9CBFA7;
+}
+
 highlighter{
   color: #03CEA4;
 }
@@ -74,7 +79,6 @@ button {
   display: inline-block;
   font-size: 13px;
 }
-
 
 a,
 a:link,

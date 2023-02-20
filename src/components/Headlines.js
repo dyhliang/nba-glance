@@ -4,15 +4,13 @@ function Headlines() {
     const [news, setNews] = useState([]);
 
     const GetNews = () => {
-        fetch(`https://tabm1jhbeb.execute-api.us-west-2.amazonaws.com/Alpha`)
-            .then((response) => response.json())
-            .then((responseJson) => {
-                setNews(responseJson);
-                return responseJson.news;
+        fetch('https://nba-stories.onrender.com/articles?source=nba')
+            .then(res => res.json())
+            .then(res => {
+                setNews(res);
+                console.log(res);
             })
-            .catch((error) => {
-                console.error(error);
-            });
+            .catch(err => console.error(err));
     };
 
     useEffect(() => {
@@ -23,10 +21,9 @@ function Headlines() {
         <div className="App">
             <h1>Headlines</h1>
             <br></br>
-            <br></br>
             <table>
-                {news.map((article) => (
-                    <tr> * {article.title}</tr>
+                {news.map(article => (
+                    <li><news> <a href={article.url}> {article.title} </a> </news> </li>
                 ))}
             </table>
         </div>
