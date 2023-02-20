@@ -1,5 +1,5 @@
 # NBA Glance
- A ReactJS app that shows NBA scores, stats, and standings that calls from the <a href="https://www.balldontlie.io/#introduction">balldontlie</a>, <a href="https://rapidapi.com/api-sports/api/api-nba/">API-NBA</a>, and <a href="https://nba-stories.onrender.com/"> NBA Stores on Render</a> APIs.
+ A ReactJS app that shows NBA scores, stats, and standings that calls from the <a href="https://www.balldontlie.io/#introduction">balldontlie</a>, <a href="https://rapidapi.com/api-sports/api/api-nba/">API-NBA</a>, and <a href="https://nba-stories.onrender.com/"> NBA Scores on Render</a> APIs.
  
  To be added:
  - Implement a sort by conference seeding for standings page.
