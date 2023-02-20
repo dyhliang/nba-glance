@@ -6,7 +6,6 @@ let randomNum = (Math.floor(Math.random() * (9000 - 1 + 1)) + 1).toString();
 
 function RewindPage() {
     const [rndGameStats, setRndGameStats] = useState([]);
-    const [moreStats, setMoreStats] = useState([]);
     const [moreInfo, setMoreInfo] = useState([]);
 
     const options = apikey();
@@ -24,25 +23,12 @@ function RewindPage() {
             .catch(err => console.error(err));
     };
 
-    const getMoreStats = () => {
-        let game_url = `'https://api-nba-v1.p.rapidapi.com/games/statistics?id=${randomNum}`
-
-        fetch(game_url, options)
-            .then(res => res.json())
-            .then(res => {
-                console.log(res.response);
-                setMoreStats(res.response);
-            })
-            .catch(err => console.error(err));
-    }
-
     function refreshPage() {
         window.location.reload(false);
     };
 
     useEffect(() => {
         getRndGame();
-        getMoreStats();
     }, []);
 
     return (
@@ -51,8 +37,8 @@ function RewindPage() {
             <br></br>
             {rndGameStats.map((output) =>
                 <rewind>
-                    <h4>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}, {output.arena.state}</h4>
-                    <h4> {output.nugget} </h4>
+                        <h4>{output.date.start.slice(0, 10)} @ {output.arena.name} in {output.arena.city}, {output.arena.state}</h4>
+                        <highlighter> {output.nugget} </highlighter>
                 </rewind>)}
             <br></br>
 
@@ -94,8 +80,14 @@ function RewindPage() {
                         </table>
                         <br></br>
                         <table>
+                            <tr>
+                                H2H This Season: {output.teams.home.nickname}
+                                <highlighter> {output.scores.home.series.win}-{output.scores.home.series.loss} </highlighter>
+                                {output.teams.visitors.nickname}
+                            </tr>
                             <tr>Lead Changes: {output.leadChanges} &nbsp; &nbsp;
-                                Times Tied: {output.timesTied}</tr>
+                                Times Tied: {output.timesTied} &nbsp; &nbsp;
+                            </tr>
                         </table>
                     </rewind>
                 </div>
