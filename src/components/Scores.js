@@ -17,7 +17,6 @@ function Scores() {
         fetch(`https://api-nba-v1.p.rapidapi.com/games?date=${todaysDate}`, options)
             .then(res => res.json())
             .then(res => {
-                console.log(res.response);
                 setRecentGames(res.response);
             })
             .catch(err => console.error(err));

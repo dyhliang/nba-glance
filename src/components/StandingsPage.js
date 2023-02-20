@@ -18,7 +18,6 @@ function StandingsPage() {
             fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022&division=atlantic', options)
                 .then(res => res.json())
                 .then(res => {
-                    console.log(res.response)
                     setAtlanticStandings(res.response);
                 }).catch(err => console.error(err));
         };

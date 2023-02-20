@@ -8,7 +8,6 @@ function Headlines() {
             .then(res => res.json())
             .then(res => {
                 setNews(res);
-                console.log(res);
             })
             .catch(err => console.error(err));
     };
