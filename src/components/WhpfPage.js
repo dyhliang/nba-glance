@@ -37,7 +37,8 @@ function WhpfPage() {
                 let searchResults = res.response.map(output => output);
                 for (let i = 0; i < searchResults.length; i++) {
                     if (searchResults[i]["firstname"] === playerFirstName) {
-                        setMoreInfo(searchResults[i]);
+                        setMoreInfo(searchResults[i])
+                        return;
                     }
                 }
             })
