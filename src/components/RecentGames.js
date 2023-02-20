@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { apikey } from './apikey';
 
 function RecentGamesPage() {
 
@@ -9,14 +10,9 @@ function RecentGamesPage() {
         let dd = String(today.getDate()).padStart(2, '0');
         let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
         let yyyy = today.getFullYear();
-        let todaysDate = yyyy + "-" + mm + "-" + dd;
+        let todaysDate = yyyy + "-" + "02" + "-" + "17";
 
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1756b7c53cmshd87a2f2cd4e125ep1eec65jsn5b1acc0a1e61', 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-            }
-        };
+        const options = apikey();
 
         fetch(`https://api-nba-v1.p.rapidapi.com/games?date=${todaysDate}`, options)
             .then(res => res.json())
@@ -39,20 +35,20 @@ function RecentGamesPage() {
             <table>
                 <thead>
                     <tr>
-                        <th> Home </th>
+                        <th> <highlighter> Home </highlighter> </th>
                         <th> </th>
                         <th> </th>
                         <th> </th>
-                        <th> Away </th>
+                        <th> <highlighter> Away </highlighter> </th>
                     </tr>
                 </thead>
                 <tbody>
                     {RecentGames.map(output =>
                         <tr>
                             <td> {output.teams.home.nickname}  </td>
-                            <td> {output.scores.home.points} </td>
+                            <td> <highlighter>{output.scores.home.points}</highlighter> </td>
                             <td> - </td>
-                            <td> {output.scores.visitors.points} </td>
+                            <td> <highlighter>{output.scores.visitors.points}</highlighter> </td>
                             <td> {output.teams.visitors.nickname} </td>
                             <td> ({output.status.long[0]}) </td>
                         </tr>)}

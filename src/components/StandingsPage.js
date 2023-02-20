@@ -79,7 +79,6 @@ function StandingsPage() {
         <div>
             <Header></Header>
             <div className='column'>
-                <h2> East </h2>
                 <table>
                     <thead>
                         <tr>
@@ -131,7 +130,6 @@ function StandingsPage() {
             </div>
 
             <div className='column'>
-                <h2> West </h2>
                 <table>
                     <thead>
                         <tr>

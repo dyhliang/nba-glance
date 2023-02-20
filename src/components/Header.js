@@ -7,24 +7,24 @@ function Header() {
             <div class='top-header'>
                 <table>
                     <tr>
-                        <td><h1><Link className="App-link" to="/"> NBA Glance </Link> </h1></td>
+                        <td><h1><Link className="App-link" to="/" class="box"> NBA Glance </Link> </h1></td>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <td>
                             <h2>
-                                <Link className="App-link" to="/standings"> Standings </Link>
+                                <Link className="App-link" to="/standings" class="box"> Standings </Link>
                             </h2>
                         </td>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <td>
-                            <h2>
-                                <Link className="App-link" to="/whpf"> Guess Who [He Played For]? </Link>
-                            </h2>
+                            <whpf>
+                                <b><Link className="App-link" to="/whpf" class="box"> Guess Who [He Played For]? </Link></b>
+                            </whpf>
                         </td>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <td>
-                            <h2>
-                                <Link className="App-link" to="/rewind"> Rewind </Link>
-                            </h2>
+                            <rewind>
+                                <Link className="App-link" to="/rewind" class="box"> Rewind </Link>
+                            </rewind>
                         </td>
                     </tr>
                 </table>

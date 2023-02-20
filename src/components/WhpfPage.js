@@ -68,14 +68,9 @@ function WhpfPage() {
     return (
         <div className="App">
             <Header></Header>
-
-            <h1> Guess Who [He Played For]? </h1>
-            <h5>
-                <a href='https://www.youtube.com/watch?v=8avNI5Tgzfs'> <i>Inspired by the TNT segment</i></a>
-            </h5>
             <br></br>
 
-            <h2>{rndPlayer.first_name} {rndPlayer.last_name} ({rndPlayer.position}) </h2>
+            <whpf>{rndPlayer.first_name} {rndPlayer.last_name} ({rndPlayer.position}) </whpf>
 
             <br></br>
             <form onSubmit={(event) => {
@@ -103,15 +98,14 @@ function WhpfPage() {
             </div>
             {isHidden &&
                 (
-                    <div>
-                        <br></br>
+                    <whpf>
                         <div>#{moreInfo.leagues.standard.jersey} </div>
                         <div>{rndPlayer.height_feet}-{rndPlayer.height_inches}, {rndPlayer.weight_pounds}lbs ({moreInfo.height.meters}m, {moreInfo.weight.kilograms}kgs)</div>
                         <div>DOB: {moreInfo.birth.date} </div>
                         <div>College: {moreInfo.affiliation} </div>
                         <div>Debuted: {moreInfo.nba.start} </div>
                         <div>Seasons Pro: {moreInfo.nba.pro} </div>
-                    </div>
+                    </whpf>
                 )
             }
             <br></br>
