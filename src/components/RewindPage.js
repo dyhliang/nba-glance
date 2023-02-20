@@ -5,9 +5,9 @@ import { apikey } from './apikey';
 let randomNum = (Math.floor(Math.random() * (9000 - 1 + 1)) + 1).toString();
 
 function RewindPage() {
+
     const [rndGameStats, setRndGameStats] = useState([]);
     const [moreInfo, setMoreInfo] = useState([]);
-
     const options = apikey();
 
     const getRndGame = () => {

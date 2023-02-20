@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 function Headlines() {
+    
     const [news, setNews] = useState([]);
 
     const GetNews = () => {
