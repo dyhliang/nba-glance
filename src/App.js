@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage';
 import RewindPage from './components/RewindPage';
-import SeedingPage from './components/SeedingPage';
 import StandingsPage from './components/StandingsPage';
 import WhpfPage from './components/WhpfPage';
 
@@ -19,10 +18,6 @@ function App() {
 
                         <Route path="/standings" exact>
                             <StandingsPage />
-                        </Route>
-
-                        <Route path="/matchups" exact>
-                            <SeedingPage />
                         </Route>
 
                         <Route path="/whpf">
