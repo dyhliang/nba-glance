@@ -8,11 +8,14 @@
 # Previews
 <img width="1199" alt="Screenshot 2022-12-14 at 9 09 11 PM" src="https://user-images.githubusercontent.com/102781030/210444020-b2357050-df80-45b8-b708-fcf8b9963124.png">
 
-<img width="986" alt="Screenshot 2023-02-19 at 8 09 13 PM" src="https://user-images.githubusercontent.com/102781030/220153838-be6b6ffe-0413-4da8-9c06-e6ad76e9b7
+<img width="986" alt="Screenshot 2023-02-19 at 8 09 13 PM" src="https://user-images.githubusercontent.com/102781030/220153838-be6b6ffe-0413-4da8-9c06-e6ad76e9b7b2.png">
+
 <img width="987" alt="Screenshot 2023-02-19 at 8 10 39 PM" src="https://user-images.githubusercontent.com/102781030/220153902-397cd2f0-11b4-463d-af6b-82ab98881966.png">
-b2.png">
+
 <img width="962" alt="Screenshot 2023-02-19 at 8 12 59 PM" src="https://user-images.githubusercontent.com/102781030/220153927-2681f64f-a503-441e-8733-0f62780a7009.png">
+
 <img width="1028" alt="Screenshot 2023-02-19 at 8 50 22 PM" src="https://user-images.githubusercontent.com/102781030/220153954-6f1c87c1-55e5-4224-a6a6-5c2236656f92.png">
+
 <img width="1080" alt="Screenshot 2023-02-19 at 8 41 52 PM" src="https://user-images.githubusercontent.com/102781030/220153971-b5632ef0-0f3d-4b51-bd75-825c461d5f9e.png">
 
 
