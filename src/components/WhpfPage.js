@@ -69,9 +69,7 @@ function WhpfPage() {
         <div className="App">
             <Header></Header>
             <br></br>
-
             <whpf>{rndPlayer.first_name} {rndPlayer.last_name} ({rndPlayer.position}) </whpf>
-
             <br></br>
             <form onSubmit={(event) => {
                 event.preventDefault();

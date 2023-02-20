@@ -9,7 +9,7 @@ function HomePage() {
             <div class='row'>
                 <Header></Header>
             </div>
-
+            
             <div class='column'>
                 <Headlines></Headlines>
             </div>
