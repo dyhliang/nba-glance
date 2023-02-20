@@ -6,7 +6,7 @@
  - Getting access to an API that allows me to use player images/likenesses
  
 # Previews
-<img width="1199" alt="Screenshot 2022-12-14 at 9 09 11 PM" src="https://user-images.githubusercontent.com/102781030/210444020-b2357050-df80-45b8-b708-fcf8b9963124.png">
+<img width="1032" alt="Screenshot 2023-02-20 at 12 11 40 PM" src="https://user-images.githubusercontent.com/102781030/220168075-a6123366-be7c-4add-a115-5c19387072ed.png">
 
 <img width="986" alt="Screenshot 2023-02-19 at 8 09 13 PM" src="https://user-images.githubusercontent.com/102781030/220153838-be6b6ffe-0413-4da8-9c06-e6ad76e9b7b2.png">
 
