@@ -2,7 +2,7 @@
  A ReactJS app that shows NBA scores, stats, and standings that calls from the <a href="https://www.balldontlie.io/#introduction">balldontlie</a>, <a href="https://rapidapi.com/api-sports/api/api-nba/">API-NBA</a>, and <a href="https://nba-stories.onrender.com/"> NBA Scores on Render</a> APIs.
  
  To be added:
- - **Work on dropdown menu for user to select in the guessing game.**
+ - **Work on dropdown menu with team names in the guessing game to better assist in the validation process.**
  - Find a way to hide API keys from previous commits.
  - Implement a sort by conference seeding for standings page.
  - Add 'all-time minutes' tracker for LeBron.
