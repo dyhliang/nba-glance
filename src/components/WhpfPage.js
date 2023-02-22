@@ -34,6 +34,7 @@ function WhpfPage() {
         fetch(playerUrl, options)
             .then(res => res.json())
             .then(res => {
+                console.log(res);
                 let searchResults = res.response.map(output => output);
                 for (let i = 0; i < searchResults.length; i++) {
                     if (searchResults[i]["firstname"] === playerFirstName) {
