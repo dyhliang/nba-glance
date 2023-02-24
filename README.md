@@ -1,8 +1,8 @@
 # NBA Glance
  A ReactJS app that shows NBA scores, stats, and standings that calls from the <a href="https://www.balldontlie.io/#introduction">balldontlie</a>, <a href="https://rapidapi.com/api-sports/api/api-nba/">API-NBA</a>, and <a href="https://nba-stories.onrender.com/"> NBA Scores on Render</a> APIs.
  
- To be added:
- - **Work on dropdown menu with team names in the guessing game to better assist in the validation process.**
+ To do:
+ - ✅ Work on dropdown menu with team names in the guessing game to better assist in the validation process.
  - Find a way to hide API keys from previous commits.
  - Implement a sort by conference seeding for standings page.
  - Add 'all-time minutes' tracker for LeBron.
@@ -16,9 +16,9 @@
 
 <img width="986" alt="Screenshot 2023-02-19 at 8 09 13 PM" src="https://user-images.githubusercontent.com/102781030/220153838-be6b6ffe-0413-4da8-9c06-e6ad76e9b7b2.png">
 
-<img width="987" alt="Screenshot 2023-02-19 at 8 10 39 PM" src="https://user-images.githubusercontent.com/102781030/220153902-397cd2f0-11b4-463d-af6b-82ab98881966.png">
+![image](https://user-images.githubusercontent.com/102781030/221269133-4f2dbf11-a175-4b75-be4a-6fa93bb4019d.png)
 
-<img width="962" alt="Screenshot 2023-02-19 at 8 12 59 PM" src="https://user-images.githubusercontent.com/102781030/220153927-2681f64f-a503-441e-8733-0f62780a7009.png">
+![image](https://user-images.githubusercontent.com/102781030/221269190-188a849b-e5d4-4296-9dd0-f22a6e162b60.png)
 
 <img width="1028" alt="Screenshot 2023-02-19 at 8 50 22 PM" src="https://user-images.githubusercontent.com/102781030/220153954-6f1c87c1-55e5-4224-a6a6-5c2236656f92.png">
 
