@@ -12,7 +12,7 @@
 
  
 # Previews
-<img width="1032" alt="Screenshot 2023-02-20 at 12 11 40 PM" src="https://user-images.githubusercontent.com/102781030/220168075-a6123366-be7c-4add-a115-5c19387072ed.png">
+<img width="1036" alt="image" src="https://user-images.githubusercontent.com/102781030/221270205-ba3f5fc6-e4d1-4f40-8b99-b7d282b7b2d0.png">
 
 <img width="986" alt="Screenshot 2023-02-19 at 8 09 13 PM" src="https://user-images.githubusercontent.com/102781030/220153838-be6b6ffe-0413-4da8-9c06-e6ad76e9b7b2.png">
 
