@@ -16,7 +16,7 @@
 
 <img width="986" alt="Screenshot 2023-02-19 at 8 09 13 PM" src="https://user-images.githubusercontent.com/102781030/220153838-be6b6ffe-0413-4da8-9c06-e6ad76e9b7b2.png">
 
-<img width="996" alt="image" src="https://user-images.githubusercontent.com/102781030/221269490-f73d9f2c-12f5-4d05-b415-17c4c562a373.png">
+<img width="1043" alt="image" src="https://user-images.githubusercontent.com/102781030/221270768-8bb433e6-434a-40a6-b61a-8ffd2b05f456.png">
 
 <img width="994" alt="image" src="https://user-images.githubusercontent.com/102781030/221269598-57dea2e5-91f8-4d41-aedb-3d1b8d11dab7.png">
 
