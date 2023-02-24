@@ -5,11 +5,16 @@ import { apikey } from './apikey';
 let teamName = "";
 let playerFirstName = "";
 let playerLastName = "";
+let teamsOptions = ["Atlanta Hawks", "Boston Celtics", "Brooklyn Nets", "Charlotte Hornets", "Chicago Bulls",
+    "Cleveland Cavaliers", "Dallas Mavericks", "Denver Nuggets", "Detroit Pistons", "Golden State Warriors", "Houston Rockets",
+    "Indiana Pacers", "LA Clippers", "Los Angeles Lakers", "Memphis Grizzlies", "Miami Heat", "Milwaukee Bucks", "Minnesota Timberwolves",
+    "New Orleans Pelicans", "New York Knicks", "Oklahoma City Thunder", "Orlando Magic", "Philadelphia 76ers", "Phoenix Suns",
+    "Portland Trail Blazers", "Sacramento Kings", "San Antonio Spurs", "Toronto Raptors", "Utah Jazz", "Washington Wizards"]
 
 function WhpfPage() {
 
     const [rndPlayer, setRndPlayer] = useState([]);
-    const [guess, setGuess] = useState("");
+    const [guess, setGuess] = useState(teamsOptions[0]);
     const [feedback, setFeedback] = useState("");
     const [moreInfo, setMoreInfo] = useState([]);
     const [isHidden, setIsHidden] = useState(false);
@@ -74,40 +79,15 @@ function WhpfPage() {
             <br></br>
             <form onSubmit={(event) => {
                 event.preventDefault();
-            }}
-            >   Guess:
-                <select name="team-names" id="user-guess">
-                    <option value="ATL">Atlanta Hawks</option>
-                    <option value="BOS">Boston Celtics</option>
-                    <option value="BKN">Brooklyn Nets</option>
-                    <option value="CHA">Charlotte Hornets</option>
-                    <option value="CHI">Chicago Bulls</option>
-                    <option value="CLE">Cleveland Cavaliers</option>
-                    <option value="DAL">Dallas Mavericks</option>
-                    <option value="DEN">Denver Nuggets</option>
-                    <option value="DET">Detroit Pistons</option>
-                    <option value="GSW">Golden State Warriors</option>
-                    <option value="HOU">Houston Rockets</option>
-                    <option value="IND">Indiana Pacers</option>
-                    <option value="LAC">LA Clippers</option>
-                    <option value="LAL">Los Angeles Lakers</option>
-                    <option value="MEM">Memphis Grizzlies</option>
-                    <option value="MIA">Miami Heat</option>
-                    <option value="MIL">Milwaukee Bucks</option>
-                    <option value="MIN">Minnesota Timberwolves</option>
-                    <option value="NOP">New Orleans Pelicans</option>
-                    <option value="NYK">New York Knicks</option>
-                    <option value="OKC">Oklahoma City Thunder</option>
-                    <option value="ORL">Orlando Magic</option>
-                    <option value="PHI">Philadelphia 76ers</option>
-                    <option value="PHX">Phoenix Suns</option>
-                    <option value="POR">Portland Trail Blazers</option>
-                    <option value="SAC">Sacramento Kings</option>
-                    <option value="SAS">San Antonio Spurs</option>
-                    <option value="TOR">Toronto Raptors</option>
-                    <option value="UTA">Utah Jazz</option>
-                    <option value="WAS">Washington Wizards</option>
-                    onChange={(e) => setGuess(e.target.value)}
+            }}>
+                <select
+                    value={guess}
+                    onChange={(e) => setGuess(e.target.value)}>
+                    {teamsOptions.map((value) => (
+                        <option value={value} key={value}>
+                            {value}
+                        </option>
+                    ))}
                 </select>
                 &nbsp; &nbsp; &nbsp;
                 <button onClick={checkGuess}> Guess! </button>
