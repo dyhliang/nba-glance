@@ -23,7 +23,7 @@ function Headlines() {
             <br></br>
             <table>
                 {news.map(article => (
-                    <li><news> <a href={article.url}> {article.title} </a> </news> </li>
+                    <li><news> <a href={article.url} target="_blank" rel="noreferrer"> {article.title} </a> </news> </li>
                 ))}
             </table>
         </div>
