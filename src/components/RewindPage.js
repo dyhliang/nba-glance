@@ -11,9 +11,9 @@ function RewindPage() {
     const options = apikey();
 
     const getRndGame = () => {
-        let new_url = `https://api-nba-v1.p.rapidapi.com/games?id=${randomNum}`
+        let game_url = `https://api-nba-v1.p.rapidapi.com/games?id=${randomNum}`
 
-        fetch(new_url, options)
+        fetch(game_url, options)
             .then(res => res.json())
             .then(res => {
                 setRndGameStats(res.response);

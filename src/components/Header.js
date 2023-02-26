@@ -17,7 +17,7 @@ function Header() {
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <td>
                             <whpf>
-                                <b><Link className="App-link" to="/whpf" class="box"> Guess Who [He Played For]? </Link></b>
+                                <b><Link className="App-link" to="/whpf" class="box"> Guess Who [He Play For]? </Link></b>
                             </whpf>
                         </td>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;

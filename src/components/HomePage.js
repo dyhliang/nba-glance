@@ -18,7 +18,6 @@ function HomePage() {
                 <Scores></Scores>
             </div>
         </div>
-
     );
 }
 
