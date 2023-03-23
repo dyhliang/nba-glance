@@ -2,17 +2,7 @@
  A ReactJS app that shows NBA scores, stats, and standings that calls from the <a href="https://www.balldontlie.io/#introduction">balldontlie</a>, <a href="https://rapidapi.com/api-sports/api/api-nba/">API-NBA</a>, and <a href="https://nba-stories.onrender.com/"> NBA Scores on Render</a> APIs.
  
  ## <a href="https://docs.google.com/presentation/d/1JWxj89EdWGDSbK6u5dAViQUVdFDMw0Ay_nFUUwavK98/edit?usp=sharing">Slideshow Overview</a>
- 
- To do:
- - ✅ Work on dropdown menu with team names in the guessing game to better assist in the validation process.
- - Find a way to hide API keys from previous commits.
- - Implement a sort by conference seeding for standings page.
- - Add 'all-time minutes' tracker for LeBron.
- - Get random linescore page to redirect user to that game's full boxscore on NBA.com.
- - CSS elements to improve general aesthetics of the app.
- - Getting access to an API that allows me to use player images/likenesses.
-
- 
+  
 # Previews
 <img width="1036" alt="image" src="https://user-images.githubusercontent.com/102781030/221270205-ba3f5fc6-e4d1-4f40-8b99-b7d282b7b2d0.png">
 
@@ -26,8 +16,17 @@
 
 <img width="1080" alt="Screenshot 2023-02-19 at 8 41 52 PM" src="https://user-images.githubusercontent.com/102781030/220153971-b5632ef0-0f3d-4b51-bd75-825c461d5f9e.png">
 
-
 ----
+ To do:
+ - ✅ Work on dropdown menu with team names in the guessing game to better assist in the validation process.
+ - Find a way to hide API keys from previous commits.
+ - Implement a sort by conference seeding for standings page.
+ - Add 'all-time minutes' tracker for LeBron.
+ - Get random linescore page to redirect user to that game's full boxscore on NBA.com.
+ - CSS elements to improve general aesthetics of the app.
+ - Getting access to an API that allows me to use player images/likenesses.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
