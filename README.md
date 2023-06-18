@@ -6,6 +6,8 @@
 # Previews
 <img width="1036" alt="image" src="https://user-images.githubusercontent.com/102781030/221270205-ba3f5fc6-e4d1-4f40-8b99-b7d282b7b2d0.png">
 
+<img width="985" alt="image" src="https://github.com/dyhliang/nba-glance/assets/102781030/392f70fb-af5f-4e9a-8224-dbf9a70ca3d8">
+
 <img width="1044" alt="image" src="https://github.com/dyhliang/nba-glance/assets/102781030/afa965a1-80e5-44a2-aa31-d5a2ac671d54">
 
 <img width="1043" alt="image" src="https://user-images.githubusercontent.com/102781030/221270768-8bb433e6-434a-40a6-b61a-8ffd2b05f456.png">
