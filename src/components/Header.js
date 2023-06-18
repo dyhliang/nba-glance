@@ -29,7 +29,6 @@ function Header() {
                     </tr>
                 </table>
             </div>
-
         </div>
     );
 }

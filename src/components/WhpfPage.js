@@ -116,7 +116,6 @@ function WhpfPage() {
             <br></br>
         </div>
     );
-
-}
+};
 
 export default WhpfPage;

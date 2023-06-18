@@ -95,10 +95,8 @@ function RewindPage() {
             <br></br>
             <br></br>
             <button onClick={refreshPage}> Rewind Again </button>
-
         </div>
     );
-
 };
 
 export default RewindPage;

@@ -179,7 +179,7 @@ function StandingsPage() {
                 <br></br>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default StandingsPage;
