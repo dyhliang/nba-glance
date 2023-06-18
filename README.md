@@ -19,7 +19,7 @@
 ----
  To do:
  - ✅ Work on dropdown menu with team names in the guessing game to better assist in the validation process.
- - Add a days left tracker until start of NBA Draft, next season.
+ - ✅ Add a days-left tracker until start of NBA Draft, free agency, next season.
  - Find a way to hide API keys from previous commits.
  - Implement a sort by conference seeding for standings page.
  - Get random linescore page to redirect user to that game's full boxscore on NBA.com.
