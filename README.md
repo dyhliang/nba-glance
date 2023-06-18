@@ -19,11 +19,10 @@
 ----
  To do:
  - ✅ Work on dropdown menu with team names in the guessing game to better assist in the validation process.
+ - Add a days left tracker until start of NBA Draft, next season.
  - Find a way to hide API keys from previous commits.
  - Implement a sort by conference seeding for standings page.
- - Add 'all-time minutes' tracker for LeBron.
  - Get random linescore page to redirect user to that game's full boxscore on NBA.com.
- - CSS elements to improve general aesthetics of the app.
  - Getting access to an API that allows me to use player images/likenesses.
 
 
