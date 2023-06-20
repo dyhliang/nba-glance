@@ -19,7 +19,7 @@ function Offseason() {
 
     return (
         <div className="App">
-            <h3> There are...</h3>
+            <h3> Welcome to the Offseason! </h3>
             <h4><highlighter>{daysUntilDraft}</highlighter> days until the NBA Draft</h4>
             <h4><highlighter>{daysUntilFA}</highlighter> days until Free Agency starts</h4>
             <h4><highlighter>{daysUntilNewSeason}</highlighter> days until the start of the new season</h4>
