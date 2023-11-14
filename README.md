@@ -17,14 +17,6 @@
 <img width="1080" alt="Screenshot 2023-02-19 at 8 41 52 PM" src="https://user-images.githubusercontent.com/102781030/220153971-b5632ef0-0f3d-4b51-bd75-825c461d5f9e.png">
 
 ----
- To do:
- - ✅ Work on dropdown menu with team names in the guessing game to better assist in the validation process.
- - ✅ Add a days-left tracker until start of NBA Draft, free agency, next season.
- - Find a way to hide API keys from previous commits.
- - Implement a sort by conference seeding for standings page.
- - Get random linescore page to redirect user to that game's full boxscore on NBA.com.
- - Getting access to an API that allows me to use player images/likenesses.
-
 
 # Getting Started with Create React App
 
